@@ -24,59 +24,59 @@ class Battle
   void renderNormAtk()
   {
       image(background,0,0);
-      enemyCurr.render(750,100);
-      enemyCurr.renderBattleBox(50,50);
+      enemyCurr.render(750*widthRatio,100*heightRatio);
+      enemyCurr.renderBattleBox(50*widthRatio,50*heightRatio);
       Dialogue battletext = new Dialogue("Choose an Action:");
       battletext.render(0);
-      mainCurr.renderBack(170,368);
-      mainCurr.renderBattleBox(520,350);
+      mainCurr.renderBack(170*widthRatio,368*heightRatio);
+      mainCurr.renderBattleBox(520*widthRatio,350*heightRatio);
       fill(0);
-      textSize(30);
-      text("Attack           Switch",580,577);
-      image(arrow,550,560);
+      textSize(30*((widthRatio+heightRatio)/2));
+      text("Attack           Switch",580*widthRatio,577*heightRatio);
+      image(arrow,550*widthRatio,560*heightRatio);
   }
   
   void renderBegin()
   {
     image(background,0,0); 
-    image(enemy.trainPic,750,100);
-    image(mainP,150,380);
+    image(enemy.trainPic,750*widthRatio,100*heightRatio);
+    image(mainP,150*widthRatio,380*heightRatio);
   }
   
   void renderNormSwt()
   {
       image(background,0,0);
-      enemyCurr.render(750,100);
-      enemyCurr.renderBattleBox(50,50);
+      enemyCurr.render(750*widthRatio,100*heightRatio);
+      enemyCurr.renderBattleBox(50*widthRatio,50*heightRatio);
       Dialogue battletext = new Dialogue("Choose an Action:");
       battletext.render(0);
-      mainCurr.renderBack(170,368);
-      mainCurr.renderBattleBox(520,350);
+      mainCurr.renderBack(170*widthRatio,368*heightRatio);
+      mainCurr.renderBattleBox(520*widthRatio,350*heightRatio);
       fill(0);
-      textSize(30);
-      text("Attack           Switch",580,577);
-      image(arrow,750,560);
+      textSize(30*((widthRatio+heightRatio)/2));
+      text("Attack           Switch",580*widthRatio,577*heightRatio);
+      image(arrow,750*widthRatio,560*heightRatio);
   }
   
   void renderMoveSelect()
   {
       image(background,0,0);
-      enemyCurr.render(750,100);
-      enemyCurr.renderBattleBox(50,50);
+      enemyCurr.render(750*widthRatio,100*heightRatio);
+      enemyCurr.renderBattleBox(50*widthRatio,50*heightRatio);
       Dialogue battletext = new Dialogue("Choose an Action:");
       battletext.render(0);
-      mainCurr.renderBack(170,368);
-      mainCurr.renderBattleBox(520,350);
+      mainCurr.renderBack(170*widthRatio,368*heightRatio);
+      mainCurr.renderBattleBox(520*widthRatio,350*heightRatio);
       fill(0);
-      textSize(30);
-      text("Attack           Switch",580,577);
-      image(arrow,550,560);
-      mainCurr.renderMoveBox(550,215);
+      textSize(30*((widthRatio+heightRatio)/2));
+      text("Attack           Switch",580*widthRatio,577*heightRatio);
+      image(arrow,550*widthRatio,560*heightRatio);
+      mainCurr.renderMoveBox(550*widthRatio,215*heightRatio);
   }
   
   void renderPokemonSwitch()
   {
-      main.renderSwitchBox(550,215);
+      main.renderSwitchBox(550*widthRatio,215*heightRatio);
   }
   
   void switchMon(int i)

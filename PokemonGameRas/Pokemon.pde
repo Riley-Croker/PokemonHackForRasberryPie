@@ -89,13 +89,13 @@ class Pokemon
      return pok;
    }
    
-   void render(int x,int y)
+   void render(float x,float y)
    {
      if(image!=null) 
        image(image,x,y);  
    }
    
-   void renderBack(int x,int y)
+   void renderBack(float x,float y)
    {
      image(backImage,x,y);  
    }
@@ -127,36 +127,36 @@ class Pokemon
        return move4;
    }
    
-   void renderNameHP(int x, int y)
+   void renderNameHP(float x, float y)
    {
      fill(0);
-     textSize(27);
+     textSize(27*((widthRatio+heightRatio)/2));
      text(name,x,y);
-     text(int(curhp) + "/" + int(hp),x+230,y);
+     text(int(curhp) + "/" + int(hp),x+230*widthRatio,y);
    }
    
-   void renderBattleBox(int x, int y)
+   void renderBattleBox(float x, float y)
    {
        PImage box = loadImage("BattleBox.png");
        image(box,x,y);
        fill(0);
-       textSize(24);
-       text(name,x+20,y+40);
-       text("HP: " + int(curhp) + " / " + int(hp),x+320,y+40);
-       primType.render(x+20,y+50);
-       if(!secType.name.equals("None"))
-         secType.render(x+80,y+50);
-       int rectVal = int(map(curhp,0,hp,0,370));
-       rect(x+65,y+75,380,30,7);
+       textSize(24*((widthRatio+heightRatio)/2));
+       text(name,x+20*widthRatio,y+40*heightRatio);
+       text("HP: " + int(curhp) + " / " + int(hp),x+320*widthRatio,y+40*heightRatio);
+       //primType.render(x+20*widthRatio,y+50*heightRatio);
+       //if(!secType.name.equals("None"))
+       //  secType.render(x+80*widthRatio,y+50*heightRatio);
+       int rectVal = int(map(curhp,0,hp,0,370*widthRatio));
+       rect(x+65*widthRatio,y+75*heightRatio,380*widthRatio,30*heightRatio,7);
        fill(230,230,230);
-       rect(x+70,y+80,370,20);
-       if(rectVal >= 190)
+       rect(x+70*widthRatio,y+80*heightRatio,370*widthRatio,20*heightRatio);
+       if(rectVal >= 190*widthRatio)
          fill(0,255,0);
-       else if(rectVal >= 50)
+       else if(rectVal >= 50*widthRatio)
          fill(255,255,0);
        else
          fill(255,0,0);
-       rect(x+70,y+80,rectVal,20);
+       rect(x+70*widthRatio,y+80*heightRatio,rectVal,20*heightRatio);
    }
    
    void checkIfFainted()
@@ -214,12 +214,12 @@ class Pokemon
        curhp=0;
    }
    
-   void renderMoveBox(int x, int y)
+   void renderMoveBox(float x, float y)
    {
      image(loadImage("MoveBox.png"),x,y);  
-     move1.render(x+30,y+50);
-     move2.render(x+30,y+120);
-     move3.render(x+30,y+190);
-     move4.render(x+30,y+260);
+     move1.render(x+30*widthRatio,y+50*heightRatio);
+     move2.render(x+30*widthRatio,y+120*heightRatio);
+     move3.render(x+30*widthRatio,y+190*heightRatio);
+     move4.render(x+30*widthRatio,y+260*heightRatio);
    }
 }

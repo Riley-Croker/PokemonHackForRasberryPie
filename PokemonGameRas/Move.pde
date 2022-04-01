@@ -45,15 +45,15 @@ class Move
     ppLeft = pp;   
   }
   
-  void render(int x, int y)
+  void render(float x, float y)
   {
     fill(0);
-    textSize(28);
+    textSize(28*((widthRatio+heightRatio)/2));
     text(name + "   " + ppLeft + "/" + pp,x,y);
     if(physical)
-      image(physicalPic,x+300,y-29);
+      image(physicalPic,x+300*widthRatio,y-20*heightRatio);
     else
-      image(specialPic,x+300,y-29);
-    type.render(x+295,y-5);
+      image(specialPic,x+300*widthRatio,y-20*heightRatio);
+    //type.render(x+295*widthRatio,y-5*heightRatio);
   }
 }

@@ -26,8 +26,8 @@ int j=0;
 boolean dialogueReturn=false;
 boolean battleStart=false;
 int switchVal2 = 0;
-int arrowCordAtk = 0;
-int arrowCordSwt = 0;
+float arrowCordAtk = 0;
+float arrowCordSwt = 0;
 Battle startBattle;
 Pokemon swablu, arceus, mewtwo, kyogre, groudon, rayquaza, genesect, stuntank, dragonite, beartic, rhyperior, magmortar, salamence, metagross, hydreigon, volcarona, goodra, noivern, porygon2, porygonZ, rotom, jolteon, vaporeon, flareon, eevee, rhydon, tyranitar, ursaring, garchomp, seaking, hitmonlee, hitmonchan, vigoroth, rapidash, zebstrika, scolipede, electivire, mamoswine, umbreon, greninja, luxray, haxorus, milotic, talonflame, purugly, genesectOP, steelix, magnezone, crobat, zubat, pangoro, raichu, nidoqueen, magneton, stunky, nidoking, golbat, gyarados, shiftry, manectric, pidgeot, conkeldurr, lucario, blissey, florges, altaria, charizard, maractus, ivysaur, cleffa, clefable, pikachu, swanna, cofagrigus, krokorok, staryu, psyduck, starmie, graveler, onix, flygon, trapinch, gengar, gardevoir, alakazam, arcanine, machamp, lapras, heracross, snorlax, staraptor, caterpie, wurmple, drowzee, kadabra, jigglypuff, pachirisu, ducklett, venasaur, blastoise, sceptile, blaziken, swampert, meganium, typhlosion, feraligatr, infernape, bidoof;
 int switchValMain=0;
@@ -2573,7 +2573,7 @@ void keyPressed()
               else if(key=='c')
               {
                 battleCounter+=2;
-                arrowCordAtk=247;
+                arrowCordAtk=247*heightRatio;
               }
               break;
             case 1:
@@ -2582,29 +2582,29 @@ void keyPressed()
               else if(key=='c')
               {
                 battleCounter+=2;
-                arrowCordSwt=247;
+                arrowCordSwt=247*heightRatio;
               }
               break;
             case 2:
               if(key=='x')
                 battleCounter-=2;
-              else if(key=='w' && arrowCordAtk>247)
-                arrowCordAtk-=70;
-              else if(key=='s' && arrowCordAtk<457)
-                arrowCordAtk+=70;
-              else if(key=='c' && arrowCordAtk==247 && startBattle.mainCurr.move1.ppLeft>0)
+              else if(key=='w' && arrowCordAtk>247*heightRatio)
+                arrowCordAtk-=70*heightRatio;
+              else if(key=='s' && arrowCordAtk<457*heightRatio)
+                arrowCordAtk+=70*heightRatio;
+              else if(key=='c' && arrowCordAtk==247*heightRatio && startBattle.mainCurr.move1.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move1,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==317 && startBattle.mainCurr.move2.ppLeft>0)
+              else if(key=='c' && arrowCordAtk==317*heightRatio && startBattle.mainCurr.move2.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move2,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==387 && startBattle.mainCurr.move3.ppLeft>0)
+              else if(key=='c' && arrowCordAtk==387*heightRatio && startBattle.mainCurr.move3.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move3,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==457 && startBattle.mainCurr.move4.ppLeft>0)
+              else if(key=='c' && arrowCordAtk==457*heightRatio && startBattle.mainCurr.move4.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move4,startBattle.enemyCurr.useRandomMove());
               }
@@ -2612,36 +2612,36 @@ void keyPressed()
             case 3:
               if(key=='x')
                 battleCounter-=2;
-              else if(key=='w' && arrowCordSwt>247)
-                arrowCordSwt-=45;
-              else if(key=='s' && arrowCordSwt<452)
-                arrowCordSwt+=45;
-              else if(key=='c' && arrowCordSwt==247 && !mainT.returnPos(1).fainted)
+              else if(key=='w' && arrowCordSwt>247*heightRatio)
+                arrowCordSwt-=45*heightRatio;
+              else if(key=='s' && arrowCordSwt<452*heightRatio)
+                arrowCordSwt+=45*heightRatio;
+              else if(key=='c' && arrowCordSwt==247*heightRatio && !mainT.returnPos(1).fainted)
               {
                 startBattle.switchMon(1);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==292 && !mainT.returnPos(2).fainted)
+              else if(key=='c' && arrowCordSwt==292*heightRatio && !mainT.returnPos(2).fainted)
               {
                 startBattle.switchMon(2);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==337 && !mainT.returnPos(3).fainted)
+              else if(key=='c' && arrowCordSwt==337*heightRatio && !mainT.returnPos(3).fainted)
               {
                 startBattle.switchMon(3);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==382 && !mainT.returnPos(4).fainted)
+              else if(key=='c' && arrowCordSwt==382*heightRatio && !mainT.returnPos(4).fainted)
               {
                 startBattle.switchMon(4);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==427 && !mainT.returnPos(5).fainted)
+              else if(key=='c' && arrowCordSwt==427*heightRatio && !mainT.returnPos(5).fainted)
               {
                 startBattle.switchMon(5);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==472 && !mainT.returnPos(6).fainted)
+              else if(key=='c' && arrowCordSwt==472*heightRatio && !mainT.returnPos(6).fainted)
               {
                 startBattle.switchMon(6);
                 battleCounter-=3;
@@ -2652,7 +2652,7 @@ void keyPressed()
                   startBattle.main.checkIfDefeated();
                   if(startBattle.main.defeated)
                     return;
-                  arrowCordSwt=247;
+                  arrowCordSwt=247*heightRatio;
                   battleCounter=3;
                   renderBattle(battleCounter,startBattle);
               }
@@ -2679,19 +2679,19 @@ void keyPressed()
               }
               break;
             case 6:
-               if(arrowCordAtk==247)
+               if(arrowCordAtk==247*heightRatio)
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move1,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==317)
+               else if(arrowCordAtk==317*heightRatio)
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move2,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==387)
+               else if(arrowCordAtk==387*heightRatio)
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move3,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==457)
+               else if(arrowCordAtk==457*heightRatio)
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move4,startBattle.enemyCurr.useRandomMove());
                }
@@ -3009,23 +3009,23 @@ void renderBattle(int aBattleCounter,Battle battle)
   {
     case 0:
       battle.renderNormAtk();
-      battle.enemy.renderPokeLeft(50,210);
+      battle.enemy.renderPokeLeft(50*widthRatio,210*heightRatio);
       break;
     case 1:
       battle.renderNormSwt();
-      battle.enemy.renderPokeLeft(50,210);
+      battle.enemy.renderPokeLeft(50*widthRatio,210*heightRatio);
       break;
     case 2:
       battle.renderMoveSelect();
-      image(arrowBlack,558,arrowCordAtk);
-      battle.enemy.renderPokeLeft(50,210);
+      image(arrowBlack,558*widthRatio,arrowCordAtk);
+      battle.enemy.renderPokeLeft(50*widthRatio,210*heightRatio);
       break;
     case 3:
       battle.renderPokemonSwitch();
-      image(arrowBlack,558,arrowCordSwt);
+      image(arrowBlack,558*widthRatio,arrowCordSwt);
       Dialogue switchDi = new Dialogue("Send in a new pokemon!");
       switchDi.render(0);
-      battle.enemy.renderPokeLeft(50,210);
+      battle.enemy.renderPokeLeft(50*widthRatio,210*heightRatio);
       break;
     case 9:
       startBattle.renderBegin();

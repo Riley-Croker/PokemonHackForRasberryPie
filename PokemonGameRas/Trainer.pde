@@ -173,67 +173,67 @@ class Trainer
     }
   }
   
-  void renderSwitchBox(int x, int y)
+  void renderSwitchBox(float x, float y)
   {
       image(switchBox,x,y);
       if(slot1.name!="None")
-        slot1.renderNameHP(x+30,y+50);
+        slot1.renderNameHP(x+30*widthRatio,y+50*heightRatio);
       if(slot2.name!="None")
-        slot2.renderNameHP(x+30,y+95);
+        slot2.renderNameHP(x+30*widthRatio,y+95*heightRatio);
       if(slot3.name!="None")
-        slot3.renderNameHP(x+30,y+140);
+        slot3.renderNameHP(x+30*widthRatio,y+140*heightRatio);
       if(slot4.name!="None")
-        slot4.renderNameHP(x+30,y+185);
+        slot4.renderNameHP(x+30*widthRatio,y+185*heightRatio);
       if(slot5.name!="None")
-        slot5.renderNameHP(x+30,y+230);
+        slot5.renderNameHP(x+30*widthRatio,y+230*heightRatio);
       if(slot6.name!="None")
-        slot6.renderNameHP(x+30,y+275);
+        slot6.renderNameHP(x+30*widthRatio,y+275*heightRatio);
   }
   
-  void renderPokeLeft(int x,int y)
+  void renderPokeLeft(float x,float y)
   {
     image(leftBox,x,y);
     if(slot1.name != "None")
     {
       if(slot1.fainted)
-        image(pokeDead,x+18,y+7);
+        image(pokeDead,x+18*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+18,y+7);
+        image(poke,x+18*widthRatio,y+7*heightRatio);
     }
     if(slot2.name != "None")
     {
       if(slot2.fainted)
-        image(pokeDead,x+62,y+7);
+        image(pokeDead,x+62*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+62,y+7);
+        image(poke,x+62*widthRatio,y+7*heightRatio);
     }
     if(slot3.name != "None")
     {
       if(slot3.fainted)
-        image(pokeDead,x+107,y+7);
+        image(pokeDead,x+107*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+107,y+7);
+        image(poke,x+107*widthRatio,y+7*heightRatio);
     }
     if(slot4.name != "None")
     {
       if(slot4.fainted)
-        image(pokeDead,x+152,y+7);
+        image(pokeDead,x+152*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+152,y+7);
+        image(poke,x+152*widthRatio,y+7*heightRatio);
     }
     if(slot5.name != "None")
     {
       if(slot5.fainted)
-        image(pokeDead,x+197,y+7);
+        image(pokeDead,x+197*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+197,y+7);
+        image(poke,x+197*widthRatio,y+7*heightRatio);
     }
     if(slot6.name != "None")
     {
       if(slot6.fainted)
-        image(pokeDead,x+242,y+7);
+        image(pokeDead,x+242*widthRatio,y+7*heightRatio);
       else
-        image(poke,x+242,y+7);
+        image(poke,x+242*widthRatio,y+7*heightRatio);
     }
   }
   

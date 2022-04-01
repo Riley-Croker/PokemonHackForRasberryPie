@@ -34,7 +34,7 @@ class Type
        pic = picTemp;
    }
    
-   void render(int x,int y)
+   void render(float x,float y)
    {
      if(pic!=null)
        image(pic,x,y);  
