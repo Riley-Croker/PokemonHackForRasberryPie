@@ -5,6 +5,10 @@ import processing.serial.*;
 int outgoingPix=0;
 int outgoingColor=0;
 
+//For Resizing
+float widthRatio = 320.0/1100.0;
+float heightRatio = 240.0/650.0;
+
 int outgoingBattleState1=0;
 int outgoingBattleState2=0;
 int outgoingBattleState3=0;
@@ -62,6 +66,13 @@ SoundFile menu,chrisS,grassS,desertS,dangerS,zaneS,caveS;
 void setup()
 {
   size(320,240);
+  println(widthRatio);
+  println(heightRatio);
+  /*
+    Size Ratios
+    Width (1100 -> 320) : .291 (16/55)
+    Height (650 -> 240) : .369 (24/65)
+  */
   //port = new Serial(this,"COM3",9600);
   background(0,0,0);
   main = new Player(loadImage("PlayerFrontStanding.png"), loadImage("PlayerFrontW1.png"), loadImage("PlayerFrontW2.png"),
@@ -572,8 +583,8 @@ void draw()
           break;
          case 1:
           background(0,0,0);
-          image(chris,430,195);
-          Dialogue intro2 = new Dialogue("Hi there, I'm Chris! { You are here for a very special purpose. { First of all, where are my manners! { Welcome to the Hack Region! { I had you sent here to help me with a dire task. { I am the owner of HackBerry Lab, the source of all power and research in the entire Hack Region. { Just the other day, an evil man by the name of Zane attacked my lab with his squad of goons and stole all our Arduinos! { Arduinos are the sole source of power for the Hack region and if we don't get them back quickly, the entire region will be in danger! { That my friend, is where you come in. { I will be entrusting you in a Pokémon to help you on your journey to defeat Zane! { In the Hack Region, people love to engage in Pokémon battles. These battles will have your Pokémon fight to see which team is stronger. { During a battle, you can either tell your Pokémon to use an { attacking move, or switch out your Pokémon to another Pokémon you have! (You can do this all using the C key to select, the X key to go back, and the WASD keys to move your arrow around) Moves have a type, power, and accuracy(1 to 100) to determine if that move hits. Typing is very important, so make sure you know your type matchups! { Eventually, you will need to defeat Zane in a battle to get the Arduinos back! { So please, go ahead and pick your starter Pokémon and battle me to practice! { Don't worry, I am not very strong.");
+          image(chris,430*widthRatio,195*heightRatio);
+          Dialogue intro2 = new Dialogue("Hi there, I'm Chris! { You are here for a very special purpose. { First of all, where are my manners! { Welcome to the Hack Region! { I had you sent here to help me with a dire task. { I am the owner of HackBerry Lab, the source of all power and research in the entire Hack Region. { Just the other day, an evil man by the name of Zane attacked my lab with his squad of goons and stole all our Arduinos! { Arduinos are the sole source of power for the Hack region and if we don't get them back quickly, the entire region will be in danger! { That my friend, is where you come in. { I will be entrusting you in a Pokémon to help you on your journey to defeat Zane! { In the Hack Region, people love to engage in Pokémon battles. These battles will have your Pokémon fight to see which team is stronger. { During a battle, you can either tell your Pokémon to use an attacking move, or switch out your Pokémon to another Pokémon you have! (You can do this all using the C key to select, the X key to go back, and the WASD keys to move your arrow around) { Moves have a type, power, and accuracy(1 to 100) to determine if that move hits. Typing is very important, so make sure you know your type matchups! { Eventually, you will need to defeat Zane in a battle to get the Arduinos back! { So please, go ahead and pick your starter Pokémon and battle me to practice! { Don't worry, I am not very strong.");
           dialogueReturn=intro2.render(dialogueCounter);
           if(dialogueReturn)
           {
@@ -588,18 +599,18 @@ void draw()
        //  chrisS.play();
        background(0,0,0);
        fill(255);
-       text("Venusuar",30,45);
-       text("Blastoise",30,115);
-       text("Charizard",30,185);
-       text("Meganium",30,255);
-       text("Feraligtr",30,325);
-       text("Typhlosion",30,395);
-       text("Sceptile",30,465);
-       text("Swampert",30,535);
-       text("Blaziken",30,605);
-       image(arrow,7,arrowCounter);
-       image(chris,700,350);
-       starterList[j].render(700,100);
+       text("Venusuar",30*widthRatio,45*heightRatio);
+       text("Blastoise",30*widthRatio,115*heightRatio);
+       text("Charizard",30*widthRatio,185*heightRatio);
+       text("Meganium",30*widthRatio,255*heightRatio);
+       text("Feraligtr",30*widthRatio,325*heightRatio);
+       text("Typhlosion",30*widthRatio,395*heightRatio);
+       text("Sceptile",30*widthRatio,465*heightRatio);
+       text("Swampert",30*widthRatio,535*heightRatio);
+       text("Blaziken",30*widthRatio,605*heightRatio);
+       image(arrow,7*widthRatio,arrowCounter*heightRatio);
+       image(chris,700*widthRatio,350*heightRatio);
+       starterList[j].render(int(700*widthRatio),int(100*heightRatio));
        break;
       case 3: 
         lab.renderTerrain();

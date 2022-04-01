@@ -20,7 +20,7 @@ class Dialogue
       
       while(i < words.length)
       {
-           if(states[j].length() > 60)
+           if(states[j].length() > 50)
              j++;
            if(words[i].equals("{"))
            {
@@ -40,10 +40,10 @@ class Dialogue
       if(states[i] == "")
         return true;
       PImage box = loadImage("TextBox.png");
-      image(box,60,528);
+      image(box,60*widthRatio,528*heightRatio);
       fill(0);
-      textSize(30);
-      text(states[i],80,550,1000,80);
+      textSize(30*((widthRatio+heightRatio)/2));
+      text(states[i],80*widthRatio,550*heightRatio,1000*widthRatio,80*heightRatio);
       return false;
    }
 }
