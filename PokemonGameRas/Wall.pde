@@ -1,11 +1,11 @@
 class Wall
 {
-  int x;
-  int y;
-  int h;
-  int w;
+  float x;
+  float y;
+  float h;
+  float w;
   
-  Wall(int aX,int aY, int aH, int aW)
+  Wall(float aX,float aY, float aH, float aW)
   {
     x = aX;
     y = aY;
@@ -13,7 +13,7 @@ class Wall
     w = aW;
   }
   
-  boolean hitWall(int xCheck, int yCheck)
+  boolean hitWall(float xCheck, float yCheck)
   {
      if(xCheck >= x && xCheck <= (x+w) && yCheck >= y && yCheck <= (y+h))
      { 

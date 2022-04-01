@@ -442,8 +442,8 @@ void setup()
   gruntm12 = new Trainer("Team Proto Grunt Noah",loadImage("ProtoMale.png"),new Dialogue("You will lose!"),snorlax.copyPok(),steelix.copyPok(),magmortar.copyPok(),beartic.copyPok(),crobat.copyPok());
   gruntf11 = new Trainer("Team Proto Admin Harmoney",loadImage("ProtoFemale.png"),new Dialogue("I am the last line of defense before Zane!"),magnezone.copyPok(),steelix.copyPok(),pangoro.copyPok(),stuntank.copyPok(),rhyperior.copyPok(),crobat.copyPok());
   zane = new Trainer("Team Proto Leader Zane",loadImage("ZaneC.png"),new Dialogue("Arceus will be mine!"),dragonite.copyPok(),rayquaza.copyPok(),mewtwo.copyPok(),kyogre.copyPok(),groudon.copyPok(),genesect.copyPok());
-  Wall[] labWall = {new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(1064,0,650,36),new Wall(0,622,28,496),new Wall(588,622,28,511),new Wall(36,281,59,324),new Wall(739,281,59,324),new Wall(243,34,54,104),new Wall(38,31,149,124),new Wall(939,31,149,124),
-                    new Wall(37,227,54,32),new Wall(37,343,54,32),new Wall(37,567,54,32),new Wall(1031,227,54,32),new Wall(1031,343,54,32),new Wall(1031,567,54,32),new Wall(355,36,76,53),new Wall(558,32,120,160),new Wall(526,237,50,40),new Wall(836,30,56,96)};
+  Wall[] labWall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,650*heightRatio,38*widthRatio),new Wall(1064*widthRatio,0,650*heightRatio,36*widthRatio),new Wall(0,622*heightRatio,28*heightRatio,496*widthRatio),new Wall(588*widthRatio,622*heightRatio,28*heightRatio,511*widthRatio),new Wall(36*widthRatio,281*heightRatio,59*heightRatio,324*widthRatio),new Wall(739*widthRatio,281*heightRatio,59*heightRatio,324*widthRatio),new Wall(243*widthRatio,34*heightRatio,54*heightRatio,104*widthRatio),new Wall(38*widthRatio,31*heightRatio,149*heightRatio,124*widthRatio),new Wall(939*widthRatio,31*heightRatio,149*heightRatio,124*widthRatio),
+                    new Wall(37*widthRatio,227*heightRatio,54*heightRatio,32*widthRatio),new Wall(37*widthRatio,343*heightRatio,54*heightRatio,32*widthRatio),new Wall(37*widthRatio,567*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,227*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,343*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,567*heightRatio,54*heightRatio,32*widthRatio),new Wall(355*widthRatio,36*heightRatio,76*heightRatio,53*widthRatio),new Wall(558*widthRatio,32*heightRatio,120*heightRatio,160*widthRatio),new Wall(526*widthRatio,237*heightRatio,50*heightRatio,40*widthRatio),new Wall(836*widthRatio,30*heightRatio,56*heightRatio,96*widthRatio)};
   //TrainerHit[] labTrainers = {new TrainerHit(1000,0,650,30,chrisT2)};
   lab = new Terrain(labPic,main,labWall);
   curRoute=lab;
@@ -2683,19 +2683,19 @@ void keyPressed()
               }
               break;
             case 6:
-               if(arrowCordAtk==247*heightRatio)
+               if(int(arrowCordAtk)==int(247*heightRatio))
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move1,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==317*heightRatio)
+               else if(int(arrowCordAtk)==int(317*heightRatio))
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move2,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==387*heightRatio)
+               else if(int(arrowCordAtk)==int(387*heightRatio))
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move3,startBattle.enemyCurr.useRandomMove());
                }
-               else if(arrowCordAtk==457*heightRatio)
+               else if(int(arrowCordAtk)==int(457*heightRatio))
                {
                  battleTurn2(startBattle,startBattle.mainCurr.move4,startBattle.enemyCurr.useRandomMove());
                }

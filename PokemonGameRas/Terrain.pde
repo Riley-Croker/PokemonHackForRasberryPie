@@ -27,7 +27,7 @@ class Terrain
     if(walls != null)
       for(Wall wall : walls)
       {
-        if(wall.hitWall(player.x,player.y-4) || wall.hitWall(player.x+48,player.y-4) || wall.hitWall(player.x+24,player.y-4))
+        if(wall.hitWall(player.x,player.y-4*heightRatio) || wall.hitWall(player.x+48*widthRatio,player.y-4*heightRatio) || wall.hitWall(player.x+24*widthRatio,player.y-4*heightRatio))
         {
           if(player.isMovingUp)
             if(!thud.isPlaying())
@@ -43,7 +43,7 @@ class Terrain
     if(walls != null)
       for(Wall wall : walls)
       {
-        if(wall.hitWall(player.x,player.y+52) || wall.hitWall(player.x+48,player.y+52) || wall.hitWall(player.x+24,player.y+52))
+        if(wall.hitWall(player.x,player.y+52*heightRatio) || wall.hitWall(player.x+48*widthRatio,player.y+52*heightRatio) || wall.hitWall(player.x+24*widthRatio,player.y+52*heightRatio))
         {
           if(player.isMovingDown)
             if(!thud.isPlaying())
@@ -59,7 +59,7 @@ class Terrain
     if(walls != null)
       for(Wall wall : walls)
       {
-        if(wall.hitWall(player.x-4,player.y) || wall.hitWall(player.x-4,player.y+48) || wall.hitWall(player.x-4,player.y+24))
+        if(wall.hitWall(player.x-4*widthRatio,player.y) || wall.hitWall(player.x-4*widthRatio,player.y+48*heightRatio) || wall.hitWall(player.x-4*widthRatio,player.y+24*heightRatio))
         {
           if(player.isMovingLeft)
             if(!thud.isPlaying())
@@ -75,7 +75,7 @@ class Terrain
     if(walls != null)
       for(Wall wall : walls)
       {
-        if(wall.hitWall(player.x+52,player.y) || wall.hitWall(player.x+52,player.y+48) || wall.hitWall(player.x+52,player.y+24))
+        if(wall.hitWall(player.x+52*widthRatio,player.y) || wall.hitWall(player.x+52*widthRatio,player.y+48*heightRatio) || wall.hitWall(player.x+52*widthRatio,player.y+24*heightRatio))
         {
           if(player.isMovingRight)
             if(!thud.isPlaying())

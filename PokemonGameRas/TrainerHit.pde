@@ -1,12 +1,12 @@
 class TrainerHit
 {
-  int x;
-  int y;
-  int h;
-  int w;
+  float x;
+  float y;
+  float h;
+  float w;
   Trainer trainer;
   
-  TrainerHit(int aX,int aY, int aH, int aW, Trainer aTrainer)
+  TrainerHit(float aX,float aY, float aH, float aW, Trainer aTrainer)
   {
     x = aX;
     y = aY;
@@ -15,7 +15,7 @@ class TrainerHit
     trainer = aTrainer;
   }
   
-  boolean hitTrainer(int xCheck, int yCheck)
+  boolean hitTrainer(float xCheck, float yCheck)
   {
      if(xCheck >= x && xCheck <= (x+w) && yCheck >= y && yCheck <= (y+h))
      { 
