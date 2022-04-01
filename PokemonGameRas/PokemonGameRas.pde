@@ -61,7 +61,7 @@ SoundFile menu,chrisS,grassS,desertS,dangerS,zaneS,caveS;
 
 void setup()
 {
-  size(340,260);
+  size(320,240);
   //port = new Serial(this,"COM3",9600);
   background(0,0,0);
   main = new Player(loadImage("PlayerFrontStanding.png"), loadImage("PlayerFrontW1.png"), loadImage("PlayerFrontW2.png"),
