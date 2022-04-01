@@ -3,8 +3,8 @@ import processing.sound.*;
 class Player
 {
    //Trainer player; 
-   int x;
-   int y;
+   float x;
+   float y;
    PImage frontS;
    PImage frontW1;
    PImage frontW2;
@@ -25,8 +25,8 @@ class Player
    
    Player(PImage frontS1, PImage frontW11, PImage frontW12, PImage backS1, PImage backW11, PImage backW12, PImage leftS1, PImage leftW11, PImage leftW12, PImage rightS1, PImage rightW11, PImage rightW12)
    {
-       x=522;
-       y=330;
+       x=522*widthRatio;
+       y=330*heightRatio;
        frontS = frontS1;
        frontW1 = frontW11;
        frontW2 = frontW12;
@@ -59,24 +59,24 @@ class Player
    void moveLeft()
    {
       if(isMovingLeft)
-        x -= 4;
+        x -= 4*widthRatio;
    }
    
    void moveUp()
    {
       if(isMovingUp)
-        y -= 4;
+        y -= 4*heightRatio;
    }
    
    void moveDown()
    {
       if(isMovingDown)
-        y += 4;
+        y += 4*heightRatio;
    }
    
    void moveRight()
    {
       if(isMovingRight)
-        x += 4;
+        x += 4*widthRatio;
    }
 }

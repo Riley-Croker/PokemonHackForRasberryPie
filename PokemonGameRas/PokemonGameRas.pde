@@ -667,10 +667,10 @@ void draw()
              switchValMainTemp=4;
              switchValMain=7;
           }
-        if(main.y > 650)
+        if(main.y > 650*heightRatio)
         {
-          main.x=520;
-          main.y=300;
+          main.x=520*widthRatio;
+          main.y=300*heightRatio;
           switchValMain++;
           ambianceState=1;
           //send();
@@ -2588,23 +2588,23 @@ void keyPressed()
             case 2:
               if(key=='x')
                 battleCounter-=2;
-              else if(key=='w' && arrowCordAtk>247*heightRatio)
+              else if(key=='w' && int(arrowCordAtk)>int(247*heightRatio))
                 arrowCordAtk-=70*heightRatio;
-              else if(key=='s' && arrowCordAtk<457*heightRatio)
+              else if(key=='s' && int(arrowCordAtk)<int(457*heightRatio))
                 arrowCordAtk+=70*heightRatio;
-              else if(key=='c' && arrowCordAtk==247*heightRatio && startBattle.mainCurr.move1.ppLeft>0)
+              else if(key=='c' && int(arrowCordAtk)==int(247*heightRatio) && startBattle.mainCurr.move1.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move1,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==317*heightRatio && startBattle.mainCurr.move2.ppLeft>0)
+              else if(key=='c' && int(arrowCordAtk)==int(317*heightRatio) && startBattle.mainCurr.move2.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move2,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==387*heightRatio && startBattle.mainCurr.move3.ppLeft>0)
+              else if(key=='c' && int(arrowCordAtk)==int(387*heightRatio) && startBattle.mainCurr.move3.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move3,startBattle.enemyCurr.useRandomMove());
               }
-              else if(key=='c' && arrowCordAtk==457*heightRatio && startBattle.mainCurr.move4.ppLeft>0)
+              else if(key=='c' && int(arrowCordAtk)==int(457*heightRatio) && startBattle.mainCurr.move4.ppLeft>0)
               {
                 battleTurn1(startBattle,startBattle.mainCurr.move4,startBattle.enemyCurr.useRandomMove());
               }
@@ -2612,36 +2612,40 @@ void keyPressed()
             case 3:
               if(key=='x')
                 battleCounter-=2;
-              else if(key=='w' && arrowCordSwt>247*heightRatio)
+              else if(key=='w' && int(arrowCordSwt)>int(247*heightRatio)){
                 arrowCordSwt-=45*heightRatio;
-              else if(key=='s' && arrowCordSwt<452*heightRatio)
+                println(arrowCordSwt/heightRatio);
+              }
+              else if(key=='s' && int(arrowCordSwt)<int(472*heightRatio)){
                 arrowCordSwt+=45*heightRatio;
-              else if(key=='c' && arrowCordSwt==247*heightRatio && !mainT.returnPos(1).fainted)
+                println(arrowCordSwt/heightRatio);
+              }
+              else if(key=='c' && int(arrowCordSwt)==int(247*heightRatio) && !mainT.returnPos(1).fainted)
               {
                 startBattle.switchMon(1);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==292*heightRatio && !mainT.returnPos(2).fainted)
+              else if(key=='c' && int(arrowCordSwt)==int(292*heightRatio) && !mainT.returnPos(2).fainted)
               {
                 startBattle.switchMon(2);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==337*heightRatio && !mainT.returnPos(3).fainted)
+              else if(key=='c' && int(arrowCordSwt)==int(337*heightRatio) && !mainT.returnPos(3).fainted)
               {
                 startBattle.switchMon(3);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==382*heightRatio && !mainT.returnPos(4).fainted)
+              else if(key=='c' && int(arrowCordSwt)==int(382*heightRatio) && !mainT.returnPos(4).fainted)
               {
                 startBattle.switchMon(4);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==427*heightRatio && !mainT.returnPos(5).fainted)
+              else if(key=='c' && int(arrowCordSwt)==int(427*heightRatio) && !mainT.returnPos(5).fainted)
               {
                 startBattle.switchMon(5);
                 battleCounter-=3;
               }
-              else if(key=='c' && arrowCordSwt==472*heightRatio && !mainT.returnPos(6).fainted)
+              else if(key=='c' && int(arrowCordSwt)==int(472*heightRatio) && !mainT.returnPos(6).fainted)
               {
                 startBattle.switchMon(6);
                 battleCounter-=3;
