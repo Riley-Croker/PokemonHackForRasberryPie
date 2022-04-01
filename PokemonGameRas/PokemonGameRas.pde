@@ -448,8 +448,8 @@ void setup()
   lab = new Terrain(labPic,main,labWall);
   curRoute=lab;
   labStart=true;
-  Wall[] route0Wall = {new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(0,621,29,1100),new Wall(1062,0,306,38),new Wall(1062,437,213,38),new Wall(93,109,79,192),new Wall(775,92,79,192),new Wall(733,295,36,64),new Wall(914,295,36,64),
-                       new Wall(395,42,236,108),new Wall(572,42,236,108),new Wall(433,286,32,28),new Wall(613,286,32,28)};
+  Wall[] route0Wall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,650*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,306*heightRatio,38*widthRatio),new Wall(1062*widthRatio,437*heightRatio,213*heightRatio,38*widthRatio),new Wall(93*widthRatio,109*heightRatio,79*heightRatio,192*widthRatio),new Wall(775*widthRatio,92*heightRatio,79*heightRatio,192*widthRatio),new Wall(733*widthRatio,295*heightRatio,36*heightRatio,64*widthRatio),new Wall(914*widthRatio,295*heightRatio,36*heightRatio,64*widthRatio),
+                       new Wall(395*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(572*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(433*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio),new Wall(613*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio)};
   route0 = new Terrain(route0pic,main,route0Wall);
   route0Start=true;
   TrainerHit[] route1Trainers = {new TrainerHit(622,249,401,38,emma),new TrainerHit(1001,249,401,38,julia)};
@@ -694,16 +694,16 @@ void draw()
         main.moveRight();
         main.moveUp();
         main.moveDown();
-        if(main.y < 225 && main.x <= 520 && main.x >= 504)
+        if(main.y < 225*heightRatio && main.x <= 520*widthRatio && main.x >= 504*widthRatio)
         {
            switchValMain--; 
-           main.x=520;
-           main.y=600;
+           main.x=520*widthRatio;
+           main.y=600*heightRatio;
         }
-        if(main.x > 1100)
+        if(main.x > 1100*widthRatio)
         {
-          main.x=30;
-          main.y=260;
+          main.x=30*widthRatio;
+          main.y=260*heightRatio;
           switchValMain++;
         }
         break;
