@@ -452,9 +452,9 @@ void setup()
                        new Wall(395*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(572*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(433*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio),new Wall(613*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio)};
   route0 = new Terrain(route0pic,main,route0Wall);
   route0Start=true;
-  TrainerHit[] route1Trainers = {new TrainerHit(622,249,401,38,emma),new TrainerHit(1001,249,401,38,julia)};
-  Wall[] route1Wall = {new Wall(0,0,29,1100),new Wall(0,0,214,38),new Wall(0,345,306,38),new Wall(0,621,29,1100),new Wall(1062,0,214,38),new Wall(1062,345,306,38),new Wall(42,40,174,256),new Wall(432,40,174,256),new Wall(809,40,174,256),new Wall(209,366,79,188),
-                           new Wall(709,466,79,188),new Wall(43,374,24,149), new Wall(729,338,24,149),new Wall(504,416,86,80),new Wall(622,201,48,38),new Wall(1001,201,48,38)};
+  TrainerHit[] route1Trainers = {new TrainerHit(622*widthRatio,249*heightRatio,401*heightRatio,38*widthRatio,emma),new TrainerHit(1001*widthRatio,249*heightRatio,401*heightRatio,38*widthRatio,julia)};
+  Wall[] route1Wall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,214*heightRatio,38*widthRatio),new Wall(0,345*heightRatio,306*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,214*heightRatio,38*widthRatio),new Wall(1062*widthRatio,345*heightRatio,306*heightRatio,38*widthRatio),new Wall(42*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(432*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(809*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(209*widthRatio,366*heightRatio,79*heightRatio,188*widthRatio),
+                           new Wall(709*widthRatio,466*heightRatio,79*heightRatio,188*widthRatio),new Wall(43*widthRatio,374*heightRatio,24*heightRatio,149*widthRatio), new Wall(729*widthRatio,338*heightRatio,24*heightRatio,149*widthRatio),new Wall(504*widthRatio,416*heightRatio,86*heightRatio,80*widthRatio),new Wall(622*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio),new Wall(1001*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio)};
   route1 = new Terrain(route1pic,main,route1Wall,route1Trainers);
   route1Start=true;
   TrainerHit[] route2Trainers = {new TrainerHit(367,0,446,36,grace),new TrainerHit(835,549,165,46,michael)};
