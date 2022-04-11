@@ -457,9 +457,9 @@ void setup()
                            new Wall(709*widthRatio,466*heightRatio,79*heightRatio,188*widthRatio),new Wall(43*widthRatio,374*heightRatio,24*heightRatio,149*widthRatio), new Wall(729*widthRatio,338*heightRatio,24*heightRatio,149*widthRatio),new Wall(504*widthRatio,416*heightRatio,86*heightRatio,80*widthRatio),new Wall(622*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio),new Wall(1001*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio)};
   route1 = new Terrain(route1pic,main,route1Wall,route1Trainers);
   route1Start=true;
-  TrainerHit[] route2Trainers = {new TrainerHit(367,0,446,36,grace),new TrainerHit(835,549,165,46,michael)};
-  Wall[] route2Wall = {new Wall(0,0,215,38),new Wall(0,345,305,38),new Wall(0,0,29,1100),new Wall(1062,0,650,38),new Wall(0,621,29,847),new Wall(940,621,29,160),new Wall(366,36,36,64),new Wall(932,34,36,64),new Wall(48,333,265,250),new Wall(367,446,54,34),
-                       new Wall(338,500,90,90),new Wall(525,499,90,90),new Wall(685,518,94,96),new Wall(126,105,76,83),new Wall(961,521,76,83),new Wall(793,549,46,42)};
+  TrainerHit[] route2Trainers = {new TrainerHit(367*widthRatio,0,446*heightRatio,36*widthRatio,grace),new TrainerHit(835*widthRatio,549*heightRatio,165*heightRatio,46*widthRatio,michael)};
+  Wall[] route2Wall = {new Wall(0,0,215*heightRatio,38*widthRatio),new Wall(0,345*heightRatio,305*heightRatio,38*widthRatio),new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,650*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,847*widthRatio),new Wall(940*widthRatio,621*heightRatio,29*heightRatio,160*widthRatio),new Wall(366*widthRatio,36*heightRatio,36*heightRatio,64*widthRatio),new Wall(932*widthRatio,34*heightRatio,36*heightRatio,64*widthRatio),new Wall(48*widthRatio,333*heightRatio,265*heightRatio,250*widthRatio),new Wall(367*widthRatio,446*heightRatio,54*heightRatio,34*widthRatio),
+                       new Wall(338*widthRatio,500*heightRatio,90*heightRatio,90*widthRatio),new Wall(525*widthRatio,499*heightRatio,90*heightRatio,90*widthRatio),new Wall(685*widthRatio,518*heightRatio,94*heightRatio,96*widthRatio),new Wall(126*widthRatio,105*heightRatio,76*heightRatio,83*widthRatio),new Wall(961*widthRatio,521*heightRatio,76*heightRatio,83*widthRatio),new Wall(793*widthRatio,549*heightRatio,46*heightRatio,42*widthRatio)};
   route2 = new Terrain(route2pic,main,route2Wall,route2Trainers);
   TrainerHit[] route3Trainers = {new TrainerHit(724,170,480,34,mason),new TrainerHit(1005,303,347,42,paul)};
   Wall[] route3Wall = {new Wall(0,0,30,189),new Wall(284,0,30,816),new Wall(0,0,650,35),new Wall(0,621,29,1100),new Wall(1066,0,308,34),new Wall(1066,432,218,34),new Wall(97,187,35,33),new Wall(60,274,41,40),new Wall(448,460,91,70), new Wall(556,548,39,38), new Wall(837,448,78,57),
@@ -714,8 +714,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=30;
-          main.y=260;
+          main.x=30*widthRatio;
+          main.y=260*heightRatio;
           mainT.reset();
           ////send();
           battleLost=false;
@@ -737,16 +737,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-         main.x=1050;
-         main.y=335;
+         main.x=1050*widthRatio;
+         main.y=335*heightRatio;
          switchValMain--;
        }
-       if(main.x>1100)
+       if(main.x>1100*widthRatio)
        {
-         main.x=30;
-         main.y=250;
+         main.x=30*widthRatio;
+         main.y=250*heightRatio;
          switchValMain+=2;
        }
        hitr1 = hitTrainer(route1);
@@ -834,8 +834,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=30;
-          main.y=250;
+          main.x=30*widthRatio;
+          main.y=250*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -857,19 +857,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-         main.x=1050;
-         main.y=250;
+         main.x=1050*widthRatio;
+         main.y=250*heightRatio;
          switchValMain-=2;
        }
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
          if(pickedSecond)
          {
            switchValMain=11;
-           main.x=210;
-           main.y=20;
+           main.x=210*widthRatio;
+           main.y=20*heightRatio;
            ambianceState=2;
            //send();
          }
