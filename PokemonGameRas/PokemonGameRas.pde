@@ -461,9 +461,9 @@ void setup()
   Wall[] route2Wall = {new Wall(0,0,215*heightRatio,38*widthRatio),new Wall(0,345*heightRatio,305*heightRatio,38*widthRatio),new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,650*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,847*widthRatio),new Wall(940*widthRatio,621*heightRatio,29*heightRatio,160*widthRatio),new Wall(366*widthRatio,36*heightRatio,36*heightRatio,64*widthRatio),new Wall(932*widthRatio,34*heightRatio,36*heightRatio,64*widthRatio),new Wall(48*widthRatio,333*heightRatio,265*heightRatio,250*widthRatio),new Wall(367*widthRatio,446*heightRatio,54*heightRatio,34*widthRatio),
                        new Wall(338*widthRatio,500*heightRatio,90*heightRatio,90*widthRatio),new Wall(525*widthRatio,499*heightRatio,90*heightRatio,90*widthRatio),new Wall(685*widthRatio,518*heightRatio,94*heightRatio,96*widthRatio),new Wall(126*widthRatio,105*heightRatio,76*heightRatio,83*widthRatio),new Wall(961*widthRatio,521*heightRatio,76*heightRatio,83*widthRatio),new Wall(793*widthRatio,549*heightRatio,46*heightRatio,42*widthRatio)};
   route2 = new Terrain(route2pic,main,route2Wall,route2Trainers);
-  TrainerHit[] route3Trainers = {new TrainerHit(724,170,480,34,mason),new TrainerHit(1005,303,347,42,paul)};
-  Wall[] route3Wall = {new Wall(0,0,30,189),new Wall(284,0,30,816),new Wall(0,0,650,35),new Wall(0,621,29,1100),new Wall(1066,0,308,34),new Wall(1066,432,218,34),new Wall(97,187,35,33),new Wall(60,274,41,40),new Wall(448,460,91,70), new Wall(556,548,39,38), new Wall(837,448,78,57),
-                       new Wall(540,148,80,54),new Wall(720,75,43,42),new Wall(724,117,53,34),new Wall(1005,251,52,42)};
+  TrainerHit[] route3Trainers = {new TrainerHit(724*widthRatio,170*heightRatio,480*heightRatio,34*widthRatio,mason),new TrainerHit(1005*widthRatio,303*heightRatio,347*heightRatio,42*widthRatio,paul)};
+  Wall[] route3Wall = {new Wall(0,0,30*heightRatio,189*widthRatio),new Wall(284*widthRatio,0,30*heightRatio,816*widthRatio),new Wall(0,0,650*heightRatio,35*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1066*widthRatio,0,308*heightRatio,34*widthRatio),new Wall(1066*widthRatio,432*heightRatio,218*heightRatio,34*widthRatio),new Wall(97*widthRatio,187*heightRatio,35*heightRatio,33*widthRatio),new Wall(60*widthRatio,274*heightRatio,41*heightRatio,40*widthRatio),new Wall(448*widthRatio,460*heightRatio,91*heightRatio,70*widthRatio), new Wall(556*widthRatio,548*heightRatio,39*heightRatio,38*widthRatio), new Wall(837*widthRatio,448*heightRatio,78*heightRatio,57*widthRatio),
+                       new Wall(540*widthRatio,148*heightRatio,80*heightRatio,54*widthRatio),new Wall(720*widthRatio,75*heightRatio,43*heightRatio,42*widthRatio),new Wall(724*widthRatio,117*heightRatio,53*heightRatio,34*widthRatio),new Wall(1005*widthRatio,251*heightRatio,52*heightRatio,42*widthRatio)};
   route3 = new Terrain(route3pic,main,route3Wall,route3Trainers);
   TrainerHit[] route4Trainers = {new TrainerHit(243,187,463,34,hunter),new TrainerHit(679,300,305,34,ben),new TrainerHit(690,550,46,410,alston)};
   Wall[] route4Wall = {new Wall(0,0,30,1100),new Wall(0,0,278,35),new Wall(0,433,217,35),new Wall(0,621,29,728),new Wall(854,621,29,246),new Wall(1066,0,650,34),new Wall(213,63,144,192),new Wall(536,116,75,55),new Wall(675,41,123,127),new Wall(715,186,73,49),new Wall(933,265,46,45),
@@ -636,8 +636,8 @@ void draw()
         i++;
         if(battleLost)
         {
-          main.x=522;
-          main.y=330;
+          main.x=522*widthRatio;
+          main.y=330*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -895,7 +895,7 @@ void draw()
        //if(!chrisS.isPlaying())
        //  chrisS.play();
        background(0,0,0);
-       image(chris,430,195);
+       image(chris,430*widthRatio,195*heightRatio);
        Dialogue intro2 = new Dialogue("Well hello again! { You are about to enter the desert! { Trainers in the desert are stronger compared to trainers you have fought so far! { Therefore, we need to increase your team's strength. { You may have noticed different trainers have different numbers of Pokémon. This is because a trainer can have up to six pokemon at a time. { Now I will let you pick a new Pokémon to act as your second { Pokémon on your team! { I would recommend you pick a Pokémon that has a different { typing than your starter so you have more type coverage. { So go ahead and pick!");
        dialogueReturn=intro2.render(dialogueCounter);
        if(dialogueReturn)
@@ -911,18 +911,18 @@ void draw()
        //  chrisS.play();
        background(0,0,0);
        fill(255);
-       text("Gengar",30,45);
-       text("Gardevoir",30,115);
-       text("Arcanine",30,185);
-       text("Alakazam",30,255);
-       text("Heracross",30,325);
-       text("Lapras",30,395);
-       text("Snorlax",30,465);
-       text("Machamp",30,535);
-       text("Staraptor",30,605);
-       image(arrow,7,arrowCounter);
-       image(chris,700,350);
-       secondaryList[j].render(700,100);
+       text("Gengar",30*widthRatio,45*heightRatio);
+       text("Gardevoir",30*widthRatio,115*heightRatio);
+       text("Arcanine",30*widthRatio,185*heightRatio);
+       text("Alakazam",30*widthRatio,255*heightRatio);
+       text("Heracross",30*widthRatio,325*heightRatio);
+       text("Lapras",30*widthRatio,395*heightRatio);
+       text("Snorlax",30*widthRatio,465*heightRatio);
+       text("Machamp",30*widthRatio,535*heightRatio);
+       text("Staraptor",30*widthRatio,605*heightRatio);
+       image(arrow,7*widthRatio,arrowCounter*heightRatio);
+       image(chris,700*widthRatio,350*heightRatio);
+       secondaryList[j].render(700*widthRatio,100*heightRatio);
        break;
      case 11:
        //startBattle.song.stop();
@@ -933,8 +933,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=210;
-          main.y=20;
+          main.x=210*widthRatio;
+          main.y=20*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -2285,113 +2285,113 @@ void draw()
 //  println("message is: " + message);
 //}
 
-//void mousePressed()
-//{
-//   switch(switchValMain)
-//   {
-//      case 0:
-//        switchValMain++;
-//        break;
-//      case 1:
-//        switchValMain++;
-//        break;
-//      case 2:
-//        switchValMain++;
-//        mainT = new Trainer("Main",grassy,new Dialogue(" "),starterList[j].copyPok());
-//        break;
-//      case 3: 
-//        switchValMain++;
-//        break;
-//      case 4:
-//        switchValMain++;
-//        break;
-//      case 5:
-//        switchValMain++;
-//        break;
-//      case 6:
-//        switchValMain+=2;
-//        break;
-//      case 8:
-//        switchValMain++;
-//        break;
-//      case 9:
-//        switchValMain++;
-//        break;
-//      case 11:
-//        switchValMain++;
-//        break;
-//      case 12:
-//        switchValMain++;
-//        break;
-//      case 13:
-//        switchValMain++;
-//        break;
-//      case 14:
-//        switchValMain++;
-//        break;
-//      case 16:
-//        switchValMain=18;
-//        break;
-//      case 18:
-//        switchValMain=19;
-//        break;
-//      case 19:
-//        switchValMain=20;
-//        break;
-//      case 20:
-//        switchValMain=21;
-//        break;
-//      case 21:
-//        switchValMain=22;
-//        main.x=530;
-//        main.y=301;
-//        break;
-//      case 22:
-//        switchValMain=23;
-//        break;
-//      case 23:
-//        switchValMain=24;
-//        break;
-//      case 17:
-//        switchValMain=30;
-//        break;
-//      case 30:
-//        switchValMain=31;
-//        break;
-//      case 31:
-//        switchValMain=32;
-//        break;
-//      case 32:
-//        switchValMain=33;
-//        break;
-//      case 33:
-//        switchValMain=34;
-//        break;
-//      case 34:
-//        switchValMain=35;
-//        break;
-//      case 36:
-//        switchValMain=37;
-//        break;
-//      case 37:
-//        switchValMain=38;
-//        break;
-//      case 38:
-//        switchValMain=39;
-//        break;
-//      case 39:
-//        main.x=525;
-//        main.y = 340;
-//        switchValMain=40;
-//        break;
-//      case 40:
-//        switchValMain=41;
-//        break;
-//      case 41:
-//        switchValMain=42;
-//        break;
-//   }
-//}
+void mousePressed()
+{
+   switch(switchValMain)
+   {
+      case 0:
+        switchValMain++;
+        break;
+      case 1:
+        switchValMain++;
+        break;
+      case 2:
+        switchValMain++;
+        mainT = new Trainer("Main",grassy,new Dialogue(" "),starterList[j].copyPok());
+        break;
+      case 3: 
+        switchValMain++;
+        break;
+      case 4:
+        switchValMain++;
+        break;
+      case 5:
+        switchValMain++;
+        break;
+      case 6:
+        switchValMain+=2;
+        break;
+      case 8:
+        switchValMain++;
+        break;
+      case 9:
+        switchValMain++;
+        break;
+      case 11:
+        switchValMain++;
+        break;
+      case 12:
+        switchValMain++;
+        break;
+      case 13:
+        switchValMain++;
+        break;
+      case 14:
+        switchValMain++;
+        break;
+      case 16:
+        switchValMain=18;
+        break;
+      case 18:
+        switchValMain=19;
+        break;
+      case 19:
+        switchValMain=20;
+        break;
+      case 20:
+        switchValMain=21;
+        break;
+      case 21:
+        switchValMain=22;
+        main.x=530;
+        main.y=301;
+        break;
+      case 22:
+        switchValMain=23;
+        break;
+      case 23:
+        switchValMain=24;
+        break;
+      case 17:
+        switchValMain=30;
+        break;
+      case 30:
+        switchValMain=31;
+        break;
+      case 31:
+        switchValMain=32;
+        break;
+      case 32:
+        switchValMain=33;
+        break;
+      case 33:
+        switchValMain=34;
+        break;
+      case 34:
+        switchValMain=35;
+        break;
+      case 36:
+        switchValMain=37;
+        break;
+      case 37:
+        switchValMain=38;
+        break;
+      case 38:
+        switchValMain=39;
+        break;
+      case 39:
+        main.x=525;
+        main.y = 340;
+        switchValMain=40;
+        break;
+      case 40:
+        switchValMain=41;
+        break;
+      case 41:
+        switchValMain=42;
+        break;
+   }
+}
 
 void mainCheckPoke()
 {
@@ -2753,8 +2753,8 @@ void keyPressed()
             main.isMovingUp = false;
             main.isMovingDown = false;
             switchValMain++;
-            main.x=210;
-            main.y=20;
+            main.x=210*widthRatio;
+            main.y=20*heightRatio;
             ambianceState=2;
             //send();
           }
