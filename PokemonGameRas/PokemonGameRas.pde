@@ -1,5 +1,5 @@
-import processing.sound.*;
-import processing.serial.*;
+//import processing.sound.*;
+//import processing.serial.*;
 //Serial port;
 
 int outgoingPix=0;
@@ -61,7 +61,7 @@ Terrain curRoute;
 boolean labStart,route0Start,route1Start;
 Dialogue move=new Dialogue("Hi");
 
-SoundFile menu,chrisS,grassS,desertS,dangerS,zaneS,caveS;
+//SoundFile menu,chrisS,grassS,desertS,dangerS,zaneS,caveS;
 
 void setup()
 {
