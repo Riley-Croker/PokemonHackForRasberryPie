@@ -91,4 +91,22 @@ class Terrain
     image(image,0,0);  
     player.render();
   }
+  
+  void resizeWalls(float wR, float hR) {
+    for(Wall wall : walls) {
+       wall.x = wall.x*wR;
+       wall.y = wall.y*hR;
+       wall.w = wall.w*wR;
+       wall.h = wall.h*hR;
+    }
+  }
+  
+  void resizeTrainers(float wR, float hR) {
+    for(TrainerHit trainer : trainers) {
+       trainer.x = trainer.x*wR;
+       trainer.y = trainer.y*hR;
+       trainer.w = trainer.w*wR;
+       trainer.h = trainer.h*hR;
+    }
+  }
 }

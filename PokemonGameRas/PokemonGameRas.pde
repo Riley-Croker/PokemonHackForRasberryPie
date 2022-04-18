@@ -442,37 +442,49 @@ void setup()
   gruntm12 = new Trainer("Team Proto Grunt Noah",loadImage("ProtoMale.png"),new Dialogue("You will lose!"),snorlax.copyPok(),steelix.copyPok(),magmortar.copyPok(),beartic.copyPok(),crobat.copyPok());
   gruntf11 = new Trainer("Team Proto Admin Harmoney",loadImage("ProtoFemale.png"),new Dialogue("I am the last line of defense before Zane!"),magnezone.copyPok(),steelix.copyPok(),pangoro.copyPok(),stuntank.copyPok(),rhyperior.copyPok(),crobat.copyPok());
   zane = new Trainer("Team Proto Leader Zane",loadImage("ZaneC.png"),new Dialogue("Arceus will be mine!"),dragonite.copyPok(),rayquaza.copyPok(),mewtwo.copyPok(),kyogre.copyPok(),groudon.copyPok(),genesect.copyPok());
-  Wall[] labWall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,650*heightRatio,38*widthRatio),new Wall(1064*widthRatio,0,650*heightRatio,36*widthRatio),new Wall(0,622*heightRatio,28*heightRatio,496*widthRatio),new Wall(588*widthRatio,622*heightRatio,28*heightRatio,511*widthRatio),new Wall(36*widthRatio,281*heightRatio,59*heightRatio,324*widthRatio),new Wall(739*widthRatio,281*heightRatio,59*heightRatio,324*widthRatio),new Wall(243*widthRatio,34*heightRatio,54*heightRatio,104*widthRatio),new Wall(38*widthRatio,31*heightRatio,149*heightRatio,124*widthRatio),new Wall(939*widthRatio,31*heightRatio,149*heightRatio,124*widthRatio),
-                    new Wall(37*widthRatio,227*heightRatio,54*heightRatio,32*widthRatio),new Wall(37*widthRatio,343*heightRatio,54*heightRatio,32*widthRatio),new Wall(37*widthRatio,567*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,227*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,343*heightRatio,54*heightRatio,32*widthRatio),new Wall(1031*widthRatio,567*heightRatio,54*heightRatio,32*widthRatio),new Wall(355*widthRatio,36*heightRatio,76*heightRatio,53*widthRatio),new Wall(558*widthRatio,32*heightRatio,120*heightRatio,160*widthRatio),new Wall(526*widthRatio,237*heightRatio,50*heightRatio,40*widthRatio),new Wall(836*widthRatio,30*heightRatio,56*heightRatio,96*widthRatio)};
+  Wall[] labWall = {new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(1064,0,650,36),new Wall(0,622,28,496),new Wall(588,622,28,511),new Wall(36,281,59,324),new Wall(739,281,59,324),new Wall(243,34,54,104),new Wall(38,31,149,124),new Wall(939,31,149,124),
+                    new Wall(37,227,54,32),new Wall(37,343,54,32),new Wall(37,567,54,32),new Wall(1031,227,54,32),new Wall(1031,343,54,32),new Wall(1031,567,54,32),new Wall(355,36,76,53),new Wall(558,32,120,160),new Wall(526,237,50,40),new Wall(836,30,56,96)};
   //TrainerHit[] labTrainers = {new TrainerHit(1000,0,650,30,chrisT2)};
   lab = new Terrain(labPic,main,labWall);
+  lab.resizeWalls(widthRatio,heightRatio);
   curRoute=lab;
   labStart=true;
-  Wall[] route0Wall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,650*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,306*heightRatio,38*widthRatio),new Wall(1062*widthRatio,437*heightRatio,213*heightRatio,38*widthRatio),new Wall(93*widthRatio,109*heightRatio,79*heightRatio,192*widthRatio),new Wall(775*widthRatio,92*heightRatio,79*heightRatio,192*widthRatio),new Wall(733*widthRatio,295*heightRatio,36*heightRatio,64*widthRatio),new Wall(914*widthRatio,295*heightRatio,36*heightRatio,64*widthRatio),
-                       new Wall(395*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(572*widthRatio,42*heightRatio,236*heightRatio,108*widthRatio),new Wall(433*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio),new Wall(613*widthRatio,286*heightRatio,32*heightRatio,28*widthRatio)};
+  Wall[] route0Wall = {new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(0,621,29,1100),new Wall(1062,0,306,38),new Wall(1062,437,213,38),new Wall(93,109,79,192),new Wall(775,92,79,192),new Wall(733,295,36,64),new Wall(914,295,36,64),
+                       new Wall(395,42,236,108),new Wall(572,42,236,108),new Wall(433,286,32,28),new Wall(613,286,32,28)};
   route0 = new Terrain(route0pic,main,route0Wall);
+  route0.resizeWalls(widthRatio,heightRatio);
   route0Start=true;
-  TrainerHit[] route1Trainers = {new TrainerHit(622*widthRatio,249*heightRatio,401*heightRatio,38*widthRatio,emma),new TrainerHit(1001*widthRatio,249*heightRatio,401*heightRatio,38*widthRatio,julia)};
-  Wall[] route1Wall = {new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(0,0,214*heightRatio,38*widthRatio),new Wall(0,345*heightRatio,306*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,214*heightRatio,38*widthRatio),new Wall(1062*widthRatio,345*heightRatio,306*heightRatio,38*widthRatio),new Wall(42*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(432*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(809*widthRatio,40*heightRatio,174*heightRatio,256*widthRatio),new Wall(209*widthRatio,366*heightRatio,79*heightRatio,188*widthRatio),
-                           new Wall(709*widthRatio,466*heightRatio,79*heightRatio,188*widthRatio),new Wall(43*widthRatio,374*heightRatio,24*heightRatio,149*widthRatio), new Wall(729*widthRatio,338*heightRatio,24*heightRatio,149*widthRatio),new Wall(504*widthRatio,416*heightRatio,86*heightRatio,80*widthRatio),new Wall(622*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio),new Wall(1001*widthRatio,201*heightRatio,48*heightRatio,38*widthRatio)};
+  TrainerHit[] route1Trainers = {new TrainerHit(622,249,401,38,emma),new TrainerHit(1001,249,401,38,julia)};
+  Wall[] route1Wall = {new Wall(0,0,29,1100),new Wall(0,0,214,38),new Wall(0,345,306,38),new Wall(0,621,29,1100),new Wall(1062,0,214,38),new Wall(1062,345,306,38),new Wall(42,40,174,256),new Wall(432,40,174,256),new Wall(809,40,174,256),new Wall(209,366,79,188),
+                           new Wall(709,466,79,188),new Wall(43,374,24,149), new Wall(729,338,24,149),new Wall(504,416,86,80),new Wall(622,201,48,38),new Wall(1001,201,48,38)};
   route1 = new Terrain(route1pic,main,route1Wall,route1Trainers);
+  route1.resizeWalls(widthRatio,heightRatio);
+  route1.resizeTrainers(widthRatio,heightRatio);
   route1Start=true;
-  TrainerHit[] route2Trainers = {new TrainerHit(367*widthRatio,0,446*heightRatio,36*widthRatio,grace),new TrainerHit(835*widthRatio,549*heightRatio,165*heightRatio,46*widthRatio,michael)};
-  Wall[] route2Wall = {new Wall(0,0,215*heightRatio,38*widthRatio),new Wall(0,345*heightRatio,305*heightRatio,38*widthRatio),new Wall(0,0,29*heightRatio,1100*widthRatio),new Wall(1062*widthRatio,0,650*heightRatio,38*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,847*widthRatio),new Wall(940*widthRatio,621*heightRatio,29*heightRatio,160*widthRatio),new Wall(366*widthRatio,36*heightRatio,36*heightRatio,64*widthRatio),new Wall(932*widthRatio,34*heightRatio,36*heightRatio,64*widthRatio),new Wall(48*widthRatio,333*heightRatio,265*heightRatio,250*widthRatio),new Wall(367*widthRatio,446*heightRatio,54*heightRatio,34*widthRatio),
-                       new Wall(338*widthRatio,500*heightRatio,90*heightRatio,90*widthRatio),new Wall(525*widthRatio,499*heightRatio,90*heightRatio,90*widthRatio),new Wall(685*widthRatio,518*heightRatio,94*heightRatio,96*widthRatio),new Wall(126*widthRatio,105*heightRatio,76*heightRatio,83*widthRatio),new Wall(961*widthRatio,521*heightRatio,76*heightRatio,83*widthRatio),new Wall(793*widthRatio,549*heightRatio,46*heightRatio,42*widthRatio)};
+  TrainerHit[] route2Trainers = {new TrainerHit(367,0,446,36,grace),new TrainerHit(835,549,165,46,michael)};
+  Wall[] route2Wall = {new Wall(0,0,215,38),new Wall(0,345,305,38),new Wall(0,0,29,1100),new Wall(1062,0,650,38),new Wall(0,621,29,847),new Wall(940,621,29,160),new Wall(366,36,36,64),new Wall(932,34,36,64),new Wall(48,333,265,250),new Wall(367,446,54,34),
+                       new Wall(338,500,90,90),new Wall(525,499,90,90),new Wall(685,518,94,96),new Wall(126,105,76,83),new Wall(961,521,76,83),new Wall(793,549,46,42)};
   route2 = new Terrain(route2pic,main,route2Wall,route2Trainers);
-  TrainerHit[] route3Trainers = {new TrainerHit(724*widthRatio,170*heightRatio,480*heightRatio,34*widthRatio,mason),new TrainerHit(1005*widthRatio,303*heightRatio,347*heightRatio,42*widthRatio,paul)};
-  Wall[] route3Wall = {new Wall(0,0,30*heightRatio,189*widthRatio),new Wall(284*widthRatio,0,30*heightRatio,816*widthRatio),new Wall(0,0,650*heightRatio,35*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1066*widthRatio,0,308*heightRatio,34*widthRatio),new Wall(1066*widthRatio,432*heightRatio,218*heightRatio,34*widthRatio),new Wall(97*widthRatio,187*heightRatio,35*heightRatio,33*widthRatio),new Wall(60*widthRatio,274*heightRatio,41*heightRatio,40*widthRatio),new Wall(448*widthRatio,460*heightRatio,91*heightRatio,70*widthRatio), new Wall(556*widthRatio,548*heightRatio,39*heightRatio,38*widthRatio), new Wall(837*widthRatio,448*heightRatio,78*heightRatio,57*widthRatio),
-                       new Wall(540*widthRatio,148*heightRatio,80*heightRatio,54*widthRatio),new Wall(720*widthRatio,75*heightRatio,43*heightRatio,42*widthRatio),new Wall(724*widthRatio,117*heightRatio,53*heightRatio,34*widthRatio),new Wall(1005*widthRatio,251*heightRatio,52*heightRatio,42*widthRatio)};
+  route2.resizeWalls(widthRatio,heightRatio);
+  route2.resizeTrainers(widthRatio,heightRatio);
+  TrainerHit[] route3Trainers = {new TrainerHit(724,170,480,34,mason),new TrainerHit(1005,303,347,42,paul)};
+  Wall[] route3Wall = {new Wall(0,0,30,189),new Wall(284,0,30,816),new Wall(0,0,650,35),new Wall(0,621,29,1100),new Wall(1066,0,308,34),new Wall(1066,432,218,34),new Wall(97,187,35,33),new Wall(60,274,41,40),new Wall(448,460,91,70), new Wall(556,548,39,38), new Wall(837,448,78,57),
+                       new Wall(540,148,80,54),new Wall(720,75,43,42),new Wall(724,117,53,34),new Wall(1005,251,52,42)};
   route3 = new Terrain(route3pic,main,route3Wall,route3Trainers);
-  TrainerHit[] route4Trainers = {new TrainerHit(243*widthRatio,187*heightRatio,463*heightRatio,34*widthRatio,hunter),new TrainerHit(679*widthRatio,300*heightRatio,305*heightRatio,34*widthRatio,ben),new TrainerHit(690*widthRatio,550*heightRatio,46*heightRatio,410*widthRatio,alston)};
-  Wall[] route4Wall = {new Wall(0,0,30*heightRatio,1100*widthRatio),new Wall(0,0,278*heightRatio,35*widthRatio),new Wall(0,433*heightRatio,217*heightRatio,35*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,728*widthRatio),new Wall(854*widthRatio,621*heightRatio,29*heightRatio,246*widthRatio),new Wall(1066*widthRatio,0,650*heightRatio,34*widthRatio),new Wall(213*widthRatio,63*heightRatio,144*heightRatio,192*widthRatio),new Wall(536*widthRatio,116*heightRatio,75*heightRatio,55*widthRatio),new Wall(675*widthRatio,41*heightRatio,123*heightRatio,127*widthRatio),new Wall(715*widthRatio,186*heightRatio,73*heightRatio,49*widthRatio),new Wall(933*widthRatio,265*heightRatio,46*heightRatio,45*widthRatio),
-                       new Wall(139*widthRatio,448*heightRatio,82*heightRatio,60*widthRatio),new Wall(390*widthRatio,460*heightRatio,44*heightRatio,47*widthRatio),new Wall(994*widthRatio,419*heightRatio,84*heightRatio,57*widthRatio),new Wall(679*widthRatio,256*heightRatio,48*heightRatio,34*widthRatio),new Wall(678*widthRatio,550*heightRatio,46*heightRatio,36*widthRatio)};
+  route3.resizeWalls(widthRatio,heightRatio);
+  route3.resizeTrainers(widthRatio,heightRatio);
+  TrainerHit[] route4Trainers = {new TrainerHit(243,187,463,34,hunter),new TrainerHit(679,300,305,34,ben),new TrainerHit(690,550,46,410,alston)};
+  Wall[] route4Wall = {new Wall(0,0,30,1100),new Wall(0,0,278,35),new Wall(0,433,217,35),new Wall(0,621,29,728),new Wall(854,621,29,246),new Wall(1066,0,650,34),new Wall(213,63,144,192),new Wall(536,116,75,55),new Wall(675,41,123,127),new Wall(715,186,73,49),new Wall(933,265,46,45),
+                       new Wall(139,448,82,60),new Wall(390,460,44,47),new Wall(994,419,84,57),new Wall(679,256,48,34),new Wall(678,550,46,36)};
   route4 = new Terrain(route4pic,main,route4Wall,route4Trainers);
+  route4.resizeWalls(widthRatio,heightRatio);
+  route4.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] route5Trainers = {new TrainerHit(321,290,360,34,halle),new TrainerHit(446,290,360,36,sarah),new TrainerHit(800,290,360,38,elizabeth)};
   Wall[] route5Wall = {new Wall(0,0,650,35),new Wall(0,0,30,157),new Wall(284,0,30,816),new Wall(0,621,29,1100),new Wall(1066,0,277,34),new Wall(1066,401,249,34),new Wall(345,38,228,188),new Wall(605,0,275,432),new Wall(163,423,74,51),new Wall(613,448,78,54),new Wall(741,462,140,140),
                        new Wall(321,247,48,34),new Wall(446,243,52,36),new Wall(800,252,48,38)};
   route5 = new Terrain(route5pic,main,route5Wall,route5Trainers);
+  route5.resizeWalls(widthRatio,heightRatio);
+  route5.resizeTrainers(widthRatio,heightRatio);
   Wall[] route6aWall = {new Wall(0,0,29,1100),new Wall(0,0,305,36),new Wall(0,436,224,36),new Wall(0,621,29,1100),new Wall(1065,0,305,35),new Wall(1065,436,224,35),new Wall(436,184,258,72),new Wall(588,186,258,72),new Wall(460,0,245,176),new Wall(1036,274,192,24)};
   route6a = new Terrain(route6apic,main,route6aWall);
   Wall[] route6bWall = {new Wall(0,0,29,1100),new Wall(0,0,305,36),new Wall(0,436,224,36),new Wall(0,621,29,1100),new Wall(1065,0,305,35),new Wall(1065,436,224,35),new Wall(436,184,258,72),new Wall(588,186,258,72),new Wall(460,0,245,176)};
@@ -1042,8 +1054,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=180;
-          main.y=20;
+          main.x=180*widthRatio;
+          main.y=20*heightRatio;
           mainT.reset();
          // send();
           battleLost=false;
@@ -1065,16 +1077,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-          main.x=760;
-          main.y = 600;
+          main.x=760*widthRatio;
+          main.y = 600*heightRatio;
           switchValMain--;
        }
-       if(main.x>1100)
+       if(main.x>1100*widthRatio)
        {
-         main.x=20;
-         main.y=355;
+         main.x=20*widthRatio;
+         main.y=355*heightRatio;
          if(!pickedThird)
          {
            switchValMain++;
