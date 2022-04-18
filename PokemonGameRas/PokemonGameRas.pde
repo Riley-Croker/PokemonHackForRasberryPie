@@ -487,8 +487,10 @@ void setup()
   route5.resizeTrainers(widthRatio,heightRatio);
   Wall[] route6aWall = {new Wall(0,0,29,1100),new Wall(0,0,305,36),new Wall(0,436,224,36),new Wall(0,621,29,1100),new Wall(1065,0,305,35),new Wall(1065,436,224,35),new Wall(436,184,258,72),new Wall(588,186,258,72),new Wall(460,0,245,176),new Wall(1036,274,192,24)};
   route6a = new Terrain(route6apic,main,route6aWall);
+  route6a.resizeWalls(widthRatio,heightRatio);
   Wall[] route6bWall = {new Wall(0,0,29,1100),new Wall(0,0,305,36),new Wall(0,436,224,36),new Wall(0,621,29,1100),new Wall(1065,0,305,35),new Wall(1065,436,224,35),new Wall(436,184,258,72),new Wall(588,186,258,72),new Wall(460,0,245,176)};
   route6b = new Terrain(route6bpic,main,route6bWall);
+  route6b.resizeWalls(widthRatio,heightRatio);
   TrainerHit[] ct1Trainers = {new TrainerHit(245,440,48,855,gruntm1),new TrainerHit(0,230,50,879,gruntf1)};
   Wall[] ct1Wall = {new Wall(0,0,650,38),new Wall(0,0,29,486),new Wall(566,0,29,534),new Wall(1062,0,650,38),new Wall(0,621,29,505),new Wall(571,621,29,529),new Wall(45,561,58,28),new Wall(54,441,55,178),new Wall(165,233,71,63),new Wall(129,280,24,27),new Wall(239,241,24,27),new Wall(45,33,58,28),new Wall(337,46,54,28),new Wall(475,0,130,14),
                     new Wall(563,0,130,14),new Wall(683,45,54,28),new Wall(750,41,55,120),new Wall(1033,33,58,28),new Wall(930,212,80,96),new Wall(889,406,24,28),new Wall(924,394,72,64),new Wall(1001,435,24,28),new Wall(1032,563,58,28),new Wall(241,440,48,30),new Wall(879,230,50,32)};
@@ -1121,7 +1123,7 @@ void draw()
        {
          case 0:
           background(0,0,0);
-          image(preschooler,430,195);
+          image(preschooler,430*widthRatio,195*heightRatio);
           Dialogue helpKid = new Dialogue("Hey! { Hey you!!!! { Please help me! { I was playing with my little Pokémon infront of the big tower over there and a lot of big and scary people came and I think they were trying to attack the tower. { I don't know what is going on but I am so little and I am so scared!! { Please help!!");
           dialogueReturn=helpKid.render(dialogueCounter);
           if(dialogueReturn)
@@ -1132,7 +1134,7 @@ void draw()
           break;
          case 1:
           background(0,0,0);
-          image(chris,430,195);
+          image(chris,430*widthRatio,195*heightRatio);
           Dialogue chrisWorried = new Dialogue("Oh no, this is not good. { That child must be talking about the cell tower up on the next route! { Those big and scary people have to be Zane and his goons. { The cell tower is home for all broadcasting and cell service in the Hack Region, so there is no telling what Zane will do there, but it can't be good. { Get in there and find out whats going on! { Also, here... { Take another Pokémon to help you out!");
           dialogueReturn=chrisWorried.render(dialogueCounter);
           if(dialogueReturn)
@@ -1150,18 +1152,18 @@ void draw()
        //  dangerS.play();
        background(0,0,0);
        fill(255);
-       text("Gyarados",30,45);
-       text("Flygon",30,115);
-       text("Shiftry",30,185);
-       text("Conkeldurr",30,255);
-       text("Manetric",30,325);
-       text("Lucario",30,395);
-       text("Blissy",30,465);
-       text("Florges",30,535);
-       text("Pidgeot",30,605);
-       image(arrow,7,arrowCounter);
-       image(chris,700,350);
-       thirdList[j].render(700,100);
+       text("Gyarados",30*widthRatio,45*heightRatio);
+       text("Flygon",30*widthRatio,115*heightRatio);
+       text("Shiftry",30*widthRatio,185*heightRatio);
+       text("Conkeldurr",30*widthRatio,255*heightRatio);
+       text("Manetric",30*widthRatio,325*heightRatio);
+       text("Lucario",30*widthRatio,395*heightRatio);
+       text("Blissy",30*widthRatio,465*heightRatio);
+       text("Florges",30*widthRatio,535*heightRatio);
+       text("Pidgeot",30*widthRatio,605*heightRatio);
+       image(arrow,7*widthRatio,arrowCounter*heightRatio);
+       image(chris,700*widthRatio,350*heightRatio);
+       thirdList[j].render(700*widthRatio,100*heightRatio);
        break;
      case 16:
      //desertS.stop();
@@ -1170,8 +1172,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=20;
-          main.y=355;
+          main.x=20*widthRatio;
+          main.y=355*heightRatio;
           mainT.reset();
          // send();
           battleLost=false;
@@ -1193,19 +1195,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-          main.x=1050;
-          main.y = 315;
+          main.x=1050*widthRatio;
+          main.y = 315*heightRatio;
           switchValMain=13;
           ambianceState=2;
          // send();
        }
-       if(main.y < 442 && main.x <= 587 && main.x >= 508)
+       if(main.y < 442*heightRatio && main.x <= 587*widthRatio && main.x >= 508*widthRatio)
        {
           switchValMain=18; 
-          main.x=515;
-          main.y=600;
+          main.x=515*widthRatio;
+          main.y=600*heightRatio;
           ambianceState=3;
           //send();
        }
@@ -1228,8 +1230,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=20;
-          main.y=355;
+          main.x=20*widthRatio;
+          main.y=355*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1251,26 +1253,26 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-          main.x=1050;
-          main.y = 315;
+          main.x=1050*widthRatio;
+          main.y = 315*heightRatio;
           switchValMain=13;
           ambianceState=2;
           //send();
        }
-       if(main.y < 442 && main.x <= 587 && main.x >= 508)
+       if(main.y < 442*heightRatio && main.x <= 587*widthRatio && main.x >= 508*widthRatio)
        {
           switchValMain=25; 
-          main.x=515;
-          main.y=600;
+          main.x=515*widthRatio;
+          main.y=600*heightRatio;
           ambianceState=0;
           //send();
        }
-       if(main.x > 1100)
+       if(main.x > 1100*widthRatio)
        {
-          main.x=20;
-          main.y=265;
+          main.x=20*widthRatio;
+          main.y=265*heightRatio;
           switchValMain=30;
        }
        hitr5 = hitTrainer(route6a);
