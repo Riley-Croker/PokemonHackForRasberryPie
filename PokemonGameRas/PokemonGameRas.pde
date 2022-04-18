@@ -465,9 +465,9 @@ void setup()
   Wall[] route3Wall = {new Wall(0,0,30*heightRatio,189*widthRatio),new Wall(284*widthRatio,0,30*heightRatio,816*widthRatio),new Wall(0,0,650*heightRatio,35*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,1100*widthRatio),new Wall(1066*widthRatio,0,308*heightRatio,34*widthRatio),new Wall(1066*widthRatio,432*heightRatio,218*heightRatio,34*widthRatio),new Wall(97*widthRatio,187*heightRatio,35*heightRatio,33*widthRatio),new Wall(60*widthRatio,274*heightRatio,41*heightRatio,40*widthRatio),new Wall(448*widthRatio,460*heightRatio,91*heightRatio,70*widthRatio), new Wall(556*widthRatio,548*heightRatio,39*heightRatio,38*widthRatio), new Wall(837*widthRatio,448*heightRatio,78*heightRatio,57*widthRatio),
                        new Wall(540*widthRatio,148*heightRatio,80*heightRatio,54*widthRatio),new Wall(720*widthRatio,75*heightRatio,43*heightRatio,42*widthRatio),new Wall(724*widthRatio,117*heightRatio,53*heightRatio,34*widthRatio),new Wall(1005*widthRatio,251*heightRatio,52*heightRatio,42*widthRatio)};
   route3 = new Terrain(route3pic,main,route3Wall,route3Trainers);
-  TrainerHit[] route4Trainers = {new TrainerHit(243,187,463,34,hunter),new TrainerHit(679,300,305,34,ben),new TrainerHit(690,550,46,410,alston)};
-  Wall[] route4Wall = {new Wall(0,0,30,1100),new Wall(0,0,278,35),new Wall(0,433,217,35),new Wall(0,621,29,728),new Wall(854,621,29,246),new Wall(1066,0,650,34),new Wall(213,63,144,192),new Wall(536,116,75,55),new Wall(675,41,123,127),new Wall(715,186,73,49),new Wall(933,265,46,45),
-                       new Wall(139,448,82,60),new Wall(390,460,44,47),new Wall(994,419,84,57),new Wall(679,256,48,34),new Wall(678,550,46,36)};
+  TrainerHit[] route4Trainers = {new TrainerHit(243*widthRatio,187*heightRatio,463*heightRatio,34*widthRatio,hunter),new TrainerHit(679*widthRatio,300*heightRatio,305*heightRatio,34*widthRatio,ben),new TrainerHit(690*widthRatio,550*heightRatio,46*heightRatio,410*widthRatio,alston)};
+  Wall[] route4Wall = {new Wall(0,0,30*heightRatio,1100*widthRatio),new Wall(0,0,278*heightRatio,35*widthRatio),new Wall(0,433*heightRatio,217*heightRatio,35*widthRatio),new Wall(0,621*heightRatio,29*heightRatio,728*widthRatio),new Wall(854*widthRatio,621*heightRatio,29*heightRatio,246*widthRatio),new Wall(1066*widthRatio,0,650*heightRatio,34*widthRatio),new Wall(213*widthRatio,63*heightRatio,144*heightRatio,192*widthRatio),new Wall(536*widthRatio,116*heightRatio,75*heightRatio,55*widthRatio),new Wall(675*widthRatio,41*heightRatio,123*heightRatio,127*widthRatio),new Wall(715*widthRatio,186*heightRatio,73*heightRatio,49*widthRatio),new Wall(933*widthRatio,265*heightRatio,46*heightRatio,45*widthRatio),
+                       new Wall(139*widthRatio,448*heightRatio,82*heightRatio,60*widthRatio),new Wall(390*widthRatio,460*heightRatio,44*heightRatio,47*widthRatio),new Wall(994*widthRatio,419*heightRatio,84*heightRatio,57*widthRatio),new Wall(679*widthRatio,256*heightRatio,48*heightRatio,34*widthRatio),new Wall(678*widthRatio,550*heightRatio,46*heightRatio,36*widthRatio)};
   route4 = new Terrain(route4pic,main,route4Wall,route4Trainers);
   TrainerHit[] route5Trainers = {new TrainerHit(321,290,360,34,halle),new TrainerHit(446,290,360,36,sarah),new TrainerHit(800,290,360,38,elizabeth)};
   Wall[] route5Wall = {new Wall(0,0,650,35),new Wall(0,0,30,157),new Wall(284,0,30,816),new Wall(0,621,29,1100),new Wall(1066,0,277,34),new Wall(1066,401,249,34),new Wall(345,38,228,188),new Wall(605,0,275,432),new Wall(163,423,74,51),new Wall(613,448,78,54),new Wall(741,462,140,140),
@@ -959,15 +959,15 @@ void draw()
        if(main.y < 0)
        {
          switchValMain=8;
-         main.x=860;
-         main.y=590;
+         main.x=860*widthRatio;
+         main.y=590*heightRatio;
          ambianceState=1;
          //send();
        }
-       if(main.x>1100)
+       if(main.x>1100*widthRatio)
        {
-         main.x=20;
-         main.y=330;
+         main.x=20*widthRatio;
+         main.y=330*heightRatio;
          switchValMain++;
        }
        hitr3 = hitTrainer(route3);
@@ -987,8 +987,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=20;
-          main.y=330;
+          main.x=20*widthRatio;
+          main.y=330*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1010,17 +1010,17 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-          main.x=1050;
-          main.y = 340;
+          main.x=1050*widthRatio;
+          main.y = 340*heightRatio;
           switchValMain--;
        }
        
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
-          main.x=190;
-          main.y=20;
+          main.x=190*widthRatio;
+          main.y=20*heightRatio;
           switchValMain++;
        }
        
