@@ -495,34 +495,48 @@ void setup()
   Wall[] ct1Wall = {new Wall(0,0,650,38),new Wall(0,0,29,486),new Wall(566,0,29,534),new Wall(1062,0,650,38),new Wall(0,621,29,505),new Wall(571,621,29,529),new Wall(45,561,58,28),new Wall(54,441,55,178),new Wall(165,233,71,63),new Wall(129,280,24,27),new Wall(239,241,24,27),new Wall(45,33,58,28),new Wall(337,46,54,28),new Wall(475,0,130,14),
                     new Wall(563,0,130,14),new Wall(683,45,54,28),new Wall(750,41,55,120),new Wall(1033,33,58,28),new Wall(930,212,80,96),new Wall(889,406,24,28),new Wall(924,394,72,64),new Wall(1001,435,24,28),new Wall(1032,563,58,28),new Wall(241,440,48,30),new Wall(879,230,50,32)};
   celltower1b = new Terrain(celltower1bpic,main,ct1Wall,ct1Trainers);
+  celltower1b.resizeWalls(widthRatio,heightRatio);
+  celltower1b.resizeTrainers(widthRatio,heightRatio);
   Wall[] ct1aWall = {new Wall(0,0,650,38),new Wall(0,0,29,486),new Wall(566,0,29,534),new Wall(1062,0,650,38),new Wall(0,621,29,505),new Wall(571,621,29,529),new Wall(45,561,58,28),new Wall(54,441,55,178),new Wall(165,233,71,63),new Wall(129,280,24,27),new Wall(239,241,24,27),new Wall(45,33,58,28),new Wall(337,46,54,28),new Wall(475,0,130,14),
                     new Wall(563,0,130,14),new Wall(683,45,54,28),new Wall(750,41,55,120),new Wall(1033,33,58,28),new Wall(930,212,80,96),new Wall(889,406,24,28),new Wall(924,394,72,64),new Wall(1001,435,24,28),new Wall(1032,563,58,28)};
   celltower1a = new Terrain(celltower1apic,main,ct1aWall);
+  celltower1a.resizeWalls(widthRatio,heightRatio);
   TrainerHit[] ct2Trainers = {new TrainerHit(358,170,480,28,gruntm2),new TrainerHit(578,165,485,32,gruntf2),new TrainerHit(705,160,590,28,gruntm3)};
   Wall[] ct2aWall = {new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(0,621,29,112),new Wall(193,621,29,907),new Wall(1062,0,234,38),new Wall(1062,310,340,38),new Wall(295,50,66,150),new Wall(581,53,54,28),new Wall(706,53,54,28),new Wall(340,446,24,28),
                     new Wall(456,489,24,28),new Wall(718,489,24,28),new Wall(839,458,24,28),new Wall(380,445,72,64),new Wall(766,449,72,64),new Wall(999,311,20,63),new Wall(999,215,20,63)};
   celltower2a = new Terrain(celltower2apic,main,ct2aWall);
+  celltower2a.resizeWalls(widthRatio,heightRatio);
   Wall[] ct2bWall = {new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(0,621,29,112),new Wall(193,621,29,907),new Wall(1062,0,234,38),new Wall(1062,310,340,38),new Wall(295,50,66,150),new Wall(581,53,54,28),new Wall(706,53,54,28),new Wall(340,446,24,28),
                     new Wall(456,489,24,28),new Wall(718,489,24,28),new Wall(839,458,24,28),new Wall(380,445,72,64),new Wall(766,449,72,64),new Wall(999,311,20,63),new Wall(999,215,20,63),new Wall(358,122,48,28),new Wall(578,115,50,32),new Wall(705,112,48,28)};
   celltower2b = new Terrain(celltower2bpic,main,ct2bWall,ct2Trainers);
+  celltower2b.resizeWalls(widthRatio,heightRatio);
+  celltower2b.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] ct3Trainers = {new TrainerHit(343,301,349,28,gruntm4),new TrainerHit(400,207,50,609,gruntf3),new TrainerHit(707,117,48,393,gruntm5)};
   Wall[] ct3aWall = {new Wall(0,0,469,38),new Wall(0,541,109,38),new Wall(0,0,29,746),new Wall(827,0,29,273),new Wall(1062,0,650,38),new Wall(0,621,29,1100),new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(125,41,80,96),new Wall(320,64,56,180),new Wall(329,136,24,24),new Wall(405,209,24,24),new Wall(327,173,72,64),
                      new Wall(541,351,24,28),new Wall(649,318,24,28),new Wall(579,309,72,64),new Wall(900,287,66,99),new Wall(860,57,22,84),new Wall(728,0,100,14),new Wall(830,0,100,14)};
   celltower3a = new Terrain(celltower3apic,main,ct3aWall);
+  celltower3a.resizeWalls(widthRatio,heightRatio);
   Wall[] ct3bWall = {new Wall(0,0,469,38),new Wall(0,541,109,38),new Wall(0,0,29,746),new Wall(827,0,29,273),new Wall(1062,0,650,38),new Wall(0,621,29,1100),new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(125,41,80,96),new Wall(320,64,56,180),new Wall(329,136,24,24),new Wall(405,209,24,24),new Wall(327,173,72,64),
                      new Wall(541,351,24,28),new Wall(649,318,24,28),new Wall(579,309,72,64),new Wall(900,287,66,99),new Wall(860,57,22,84),new Wall(728,0,100,14),new Wall(830,0,100,14),new Wall(343,253,48,28),new Wall(1009,207,50,32),new Wall(677,117,48,30)};
   celltower3b = new Terrain(celltower3bpic,main,ct3bWall,ct3Trainers);
+  celltower3b.resizeWalls(widthRatio,heightRatio);
+  celltower3b.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] ct4Trainers = {new TrainerHit(279,457,48,371,gruntm6),new TrainerHit(324,225,50,395,gruntf4),new TrainerHit(0,106,50,690,gruntf5)};
   Wall[] ct4aWall = {new Wall(0,0,650,38),new Wall(0,0,29,508),new Wall(589,0,29,511),new Wall(1062,0,650,38),new Wall(0,621,29,508),new Wall(589,621,29,511),new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(76,444,24,28),new Wall(204,477,24,28),new Wall(119,437,72,64),new Wall(55,221,56,270),new Wall(775,221,56,270),
                      new Wall(378,42,54,28),new Wall(691,42,54,28),new Wall(766,384,24,28),new Wall(894,417,24,28),new Wall(809,377,72,64),new Wall(490,0,100,14),new Wall(592,0,100,14)};
   celltower4a = new Terrain(celltower4apic,main,ct4aWall);
+  celltower4a.resizeWalls(widthRatio,heightRatio);
   Wall[] ct4bWall = {new Wall(0,0,650,38),new Wall(0,0,29,508),new Wall(589,0,29,511),new Wall(1062,0,650,38),new Wall(0,621,29,508),new Wall(589,621,29,511),new Wall(45,561,58,28),new Wall(45,33,58,28),new Wall(1033,33,58,28),new Wall(1032,563,58,28),new Wall(76,444,24,28),new Wall(204,477,24,28),new Wall(119,437,72,64),new Wall(55,221,56,270),new Wall(775,221,56,270),
                      new Wall(378,42,54,28),new Wall(691,42,54,28),new Wall(766,384,24,28),new Wall(894,417,24,28),new Wall(809,377,72,64),new Wall(490,0,100,14),new Wall(592,0,100,14),new Wall(251,457,48,28),new Wall(719,225,50,32),new Wall(690,106,50,32)};
   celltower4b = new Terrain(celltower4bpic,main,ct4bWall,ct4Trainers);
+  celltower4b.resizeWalls(widthRatio,heightRatio);
+  celltower4b.resizeTrainers(widthRatio,heightRatio);
   Wall[] ct5aWall = {new Wall(0,0,29,1100),new Wall(0,0,650,38),new Wall(1062,0,650,38),new Wall(0,621,29,508),new Wall(589,621,29,511),new Wall(472,51,116,160)};
   cellTower5a = new Terrain(celltower5apic,main,ct5aWall);
+  cellTower5a.resizeWalls(widthRatio,heightRatio);
   Wall[] ct5bWall = {};
   cellTower5b = new Terrain(celltower5bpic,main,ct5bWall);
+  cellTower5b.resizeWalls(widthRatio,heightRatio);
   TrainerHit[] route7Trainers = {new TrainerHit(343,460,190,38,zoe),new TrainerHit(599,377,273,32,zach),new TrainerHit(723,464,186,35,rob)};
   Wall[] route7Wall = {new Wall(0,0,29,1100),new Wall(0,0,214,35),new Wall(0,345,305,35),new Wall(1064,0,214,36),new Wall(1064,345,305,36),new Wall(0,621,29,1100),new Wall(80,86,79,64),new Wall(951,96,79,64),new Wall(186,41,296,324),new Wall(316,337,76,92),new Wall(563,41,296,324),new Wall(693,337,76,92),
                        new Wall(343,408,52,38),new Wall(599,327,50,32),new Wall(723,416,48,35)};
@@ -1124,7 +1138,7 @@ void draw()
          case 0:
           background(0,0,0);
           image(preschooler,430*widthRatio,195*heightRatio);
-          Dialogue helpKid = new Dialogue("Hey! { Hey you!!!! { Please help me! { I was playing with my little Pokémon infront of the big tower over there and a lot of big and scary people came and I think they were trying to attack the tower. { I don't know what is going on but I am so little and I am so scared!! { Please help!!");
+          Dialogue helpKid = new Dialogue("Hey! { Hey you!!!! { Please help me! { I was playing with my little Pokémon infront of the big tower over there and a lot of big and scary people came and I think they were trying to attack the tower. I don't know what is going on but I am so little and I am so scared!! { Please help!!");
           dialogueReturn=helpKid.render(dialogueCounter);
           if(dialogueReturn)
           {
@@ -1291,8 +1305,8 @@ void draw()
        i++;
        if(battleLost)
         { 
-          main.x=515;
-          main.y=600;
+          main.x=515*widthRatio;
+          main.y=600*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1314,19 +1328,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y>650)
+       if(main.y>650*heightRatio)
        {
-         main.x=525;
-         main.y=450;
+         main.x=525*widthRatio;
+         main.y=450*heightRatio;
          if(cellTower)
            switchValMain=17;
          else 
            switchValMain=16;
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-         main.x=134;
-         main.y=580;
+         main.x=134*widthRatio;
+         main.y=580*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
@@ -1350,8 +1364,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=134;
-          main.y=580;
+          main.x=134*widthRatio;
+          main.y=580*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1373,19 +1387,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y>650)
+       if(main.y>650*heightRatio)
        {
-         main.x=500;
-         main.y=30;
+         main.x=500*widthRatio;
+         main.y=30*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
            switchValMain=18;
        }
-       if(main.x>1060)
+       if(main.x>1060*widthRatio)
        {
-         main.x=42;
-         main.y=485;
+         main.x=42*widthRatio;
+         main.y=485*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
@@ -1407,8 +1421,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=42;
-          main.y=485;
+          main.x=42*widthRatio;
+          main.y=485*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1430,19 +1444,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x<-45)
+       if(main.x<-45*widthRatio)
        {
-         main.x=965;
-         main.y=265;
+         main.x=965*widthRatio;
+         main.y=265*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
            switchValMain=19;
        }
-       if(main.y<-45)
+       if(main.y<-45*heightRatio)
        {
-         main.x=530;
-         main.y=565;
+         main.x=530*widthRatio;
+         main.y=565*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
@@ -1464,8 +1478,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=530;
-          main.y=565;
+          main.x=530*widthRatio;
+          main.y=565*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -1487,19 +1501,19 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
-         main.x=765;
-         main.y=95;
+         main.x=765*widthRatio;
+         main.y=95*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
            switchValMain=20;
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-         main.x=526;
-         main.y=301;
+         main.x=526*widthRatio;
+         main.y=301*heightRatio;
          if(cellTower)
            switchValMain=999;
          else 
@@ -1525,7 +1539,7 @@ void draw()
           //send();
           switchValMain++;
         }
-        Dialogue zaneMonologue = new Dialogue("So... { We finally meet. { You must be the person Chris sent after me... { It's a true shame to tell you that you are too late. { I stole the Arduinos for a reason you know. { Ancient legends tell of a mythical Pokémon that lived in the Hack region that has never been beaten in battle. { This Pokémon goes by the name of Genesect. { Genesect has said to be dormant for over 1000 years! { Legend says in order to summon Genesect, you must go to a very high point in the Hack region and unleash a large amount of { electricity. That is where the Arduinos came in. { So that brings us here... { I'm sorry you missed the light show, but you showed up a bit too late... { GENESECT ATTACK!!");
+        Dialogue zaneMonologue = new Dialogue("So... { We finally meet. { You must be the person Chris sent after me... { It's a true shame to tell you that you are too late. I stole the Arduinos for a reason you know. { Ancient legends tell of a mythical Pokémon that lived in the Hack region that has never been beaten in battle. This Pokémon goes by the name of Genesect. { Genesect has said to be dormant for over 1000 years! Legend says in order to summon Genesect, you must go to a very high point in the Hack region and unleash a large amount of electricity. { That is where the Arduinos came in. { So that brings us here... { I'm sorry you missed the light show, but you showed up a bit too late... { GENESECT ATTACK!!");
         dialogueReturn=zaneMonologue.render(dialogueCounter);
         if(dialogueReturn)
         {
@@ -1544,8 +1558,8 @@ void draw()
        {
          case 0:
           background(0,0,0);
-          image(loadImage("ZaneC.png"),430,195);
-          Dialogue helpKid = new Dialogue("HAHAHAHAH!!! { You really thought you could stop me. { With Genesect, the whole Hack Region will bow to me!! { Now all I have to do is go town to town showing my strength until I reach the Dark Cave where my plan will fully be complete! { I would recommend you go home and stay out of my way!");
+          image(loadImage("ZaneC.png"),430*widthRatio,195*heightRatio);
+          Dialogue helpKid = new Dialogue("HAHAHAHAH!!! { You really thought you could stop me. With Genesect, the whole Hack Region will bow to me!! { Now all I have to do is go town to town showing my strength until I reach the Dark Cave where my plan will fully be complete! { I would recommend you go home and stay out of my way!");
           dialogueReturn=helpKid.render(dialogueCounter);
           if(dialogueReturn)
           {
@@ -1555,7 +1569,7 @@ void draw()
           break;
          case 1:
           background(0,0,0);
-          image(chris,430,195);
+          image(chris,430*widthRatio,195*heightRatio);
           Dialogue chrisWorried = new Dialogue("... { Are you okay?? { Oh my goodness, this is not good... { I have only heard legends of Genesect, but I didn't think they were true. { If Zane's bond with Genesect stays, we are in great danger... I don't know what Zane's plans are, but they can't be good. { You need to get to the Dark Cave and stop whatever he has been planning... { Here, take another Pokémon to help you in your journey to the Dark Cave.");
           dialogueReturn=chrisWorried.render(dialogueCounter);
           if(dialogueReturn)
@@ -1573,18 +1587,18 @@ void draw()
        //  chrisS.play();
        background(0,0,0);
        fill(255);
-       text("Mamoswine",30,45);
-       text("Umbreon",30,115);
-       text("Altaria",30,185);
-       text("Greninja",30,255);
-       text("Luxray",30,325);
-       text("Haxorus",30,395);
-       text("Nidoking",30,465);
-       text("Milotic",30,535);
-       text("Talonflame",30,605);
-       image(arrow,7,arrowCounter);
-       image(chris,700,350);
-       fourthList[j].render(700,100);
+       text("Mamoswine",30*widthRatio,45*heightRatio);
+       text("Umbreon",30*widthRatio,115*heightRatio);
+       text("Altaria",30*widthRatio,185*heightRatio);
+       text("Greninja",30*widthRatio,255*heightRatio);
+       text("Luxray",30*widthRatio,325*heightRatio);
+       text("Haxorus",30*widthRatio,395*heightRatio);
+       text("Nidoking",30*widthRatio,465*heightRatio);
+       text("Milotic",30*widthRatio,535*heightRatio);
+       text("Talonflame",30*widthRatio,605*heightRatio);
+       image(arrow,7*widthRatio,arrowCounter*heightRatio);
+       image(chris,700*widthRatio,350*heightRatio);
+       fourthList[j].render(700*widthRatio,100*heightRatio);
        break;
      case 25:
        //if(!grassS.isPlaying())
@@ -1603,18 +1617,18 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y>650)
+       if(main.y>650*heightRatio)
        {
-         main.x=525;
-         main.y=450;
+         main.x=525*widthRatio;
+         main.y=450*heightRatio;
          switchValMain=17;
          ambianceState=1;
          //send();
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-         main.x=134;
-         main.y=580;
+         main.x=134*widthRatio;
+         main.y=580*heightRatio;
          switchValMain=26;
        }
        break;
@@ -1635,16 +1649,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y>650)
+       if(main.y>650*heightRatio)
        {
-         main.x=500;
-         main.y=30;
+         main.x=500*widthRatio;
+         main.y=30*heightRatio;
          switchValMain=25;
        }
-       if(main.x>1060)
+       if(main.x>1060*widthRatio)
        {
-         main.x=42;
-         main.y=485;
+         main.x=42*widthRatio;
+         main.y=485*heightRatio;
          switchValMain=27;
        }
        break;
@@ -1665,16 +1679,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x<-45)
+       if(main.x<-45*widthRatio)
        {
-         main.x=965;
-         main.y=265;
+         main.x=965*widthRatio;
+         main.y=265*heightRatio;
          switchValMain=26;
        }
-       if(main.y<-45)
+       if(main.y<-45*heightRatio)
        {
-         main.x=530;
-         main.y=565;
+         main.x=530*widthRatio;
+         main.y=565*heightRatio;
          switchValMain=28;
        }
        break;
@@ -1695,16 +1709,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
-         main.x=765;
-         main.y=95;
+         main.x=765*widthRatio;
+         main.y=95*heightRatio;
          switchValMain=27;
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-         main.x=530;
-         main.y=565;
+         main.x=530*widthRatio;
+         main.y=565*heightRatio;
          switchValMain=29;
        }
        break;
@@ -1725,10 +1739,10 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
-         main.x=530;
-         main.y=110;
+         main.x=530*widthRatio;
+         main.y=110*heightRatio;
          switchValMain=28;
        }
        break;
@@ -2828,8 +2842,8 @@ void keyPressed()
           main.isMovingUp = false;
           main.isMovingDown = false;
           switchValMain=17;
-          main.x=20;
-          main.y=355;
+          main.x=20*widthRatio;
+          main.y=355*heightRatio;
           cellTower=true;
           ambianceState=1;
           //send();
