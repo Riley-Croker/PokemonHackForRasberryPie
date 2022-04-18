@@ -565,18 +565,26 @@ void setup()
   Wall[] dc1Wall = {new Wall(0,0,29,1100),new Wall(0,621,29,1100),new Wall(0,0,393,38),new Wall(0,505,145,38),new Wall(1064,0,140,36),new Wall(1064,228,422,36),new Wall(273,44,106,102),new Wall(707,500,106,102),new Wall(453,477,50,32),new Wall(856,53,50,32),new Wall(551,51,50,32),
                     new Wall(305,160,48,28),new Wall(552,111,50,32),new Wall(860,121,48,28)};
   darkCave1 = new Terrain(darkCave1pic,main,dc1Wall,dc1Trainers);
+  darkCave1.resizeWalls(widthRatio,heightRatio);
+  darkCave1.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] dc2Trainers = {new TrainerHit(404,197,453,32,gruntf7),new TrainerHit(625,89,561,28,gruntm9),new TrainerHit(620,56,50,334,gruntf8)};
   Wall[] dc2Wall = {new Wall(0,0,420,38),new Wall(0,505,145,38),new Wall(0,0,29,817),new Wall(907,0,29,193),new Wall(1064,0,650,36),new Wall(0,621,29,1100),new Wall(92,150,54,32),new Wall(745,506,54,32),new Wall(1003,53,54,32),new Wall(212,139,30,36),new Wall(505,70,30,36),new Wall(373,40,106,100),new Wall(592,36,88,96),
                     new Wall(404,147,50,32),new Wall(625,41,48,28),new Wall(954,56,50,32)};
   darkCave2 = new Terrain(darkCave2pic,main,dc2Wall,dc2Trainers);
+  darkCave2.resizeWalls(widthRatio,heightRatio);
+  darkCave2.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] dc3Trainers = {new TrainerHit(99,486,48,1001,gruntm10),new TrainerHit(633,158,492,32,gruntf9),new TrainerHit(1001,94,556,28,gruntm11)};
   Wall[] dc3Wall = {new Wall(0,0,650,38),new Wall(0,0,29,1100),new Wall(0,621,29,224),new Wall(314,621,29,786),new Wall(1064,0,140,36),new Wall(1064,224,426,36),new Wall(50,477,54,32),new Wall(790,397,54,32),new Wall(633,42,54,32),new Wall(326,53,106,100),new Wall(85,79,38,44),new Wall(987,559,38,44),
                     new Wall(99,486,48,30),new Wall(633,108,50,32),new Wall(1001,46,48,28)};
   darkCave3 = new Terrain(darkCave3pic,main,dc3Wall,dc3Trainers);
+  darkCave3.resizeWalls(widthRatio,heightRatio);
+  darkCave3.resizeTrainers(widthRatio,heightRatio);
   TrainerHit[] dc4Trainers = {new TrainerHit(207,175,475,32,gruntf10),new TrainerHit(537,197,453,28,gruntm12),new TrainerHit(560,49,50,389,gruntf11)};
   Wall[] dc4Wall = {new Wall(0,0,29,787),new Wall(877,0,29,223),new Wall(0,0,365,38),new Wall(0,449,201,38),new Wall(0,621,29,1100),new Wall(1064,0,650,36),new Wall(207,60,50,32),new Wall(348,517,50,32),new Wall(996,48,50,32),new Wall(502,39,106,100),
                     new Wall(207,125,50,32),new Wall(537,149,48,28),new Wall(949,49,50,32)};
   darkCave4 = new Terrain(darkCave4pic,main,dc4Wall,dc4Trainers);
+  darkCave4.resizeWalls(widthRatio,heightRatio);
+  darkCave4.resizeTrainers(widthRatio,heightRatio);
   Wall[] finalAWall = {};
   finalA = new Terrain(finalApic,main,finalAWall);
   Wall[] finalBWall = {};
@@ -1976,8 +1984,8 @@ void draw()
        //if(!chrisS.isPlaying())
        //  chrisS.play();
        background(0,0,0);
-       image(chris,430,195);
-       Dialogue caveEnter = new Dialogue("Pssst... { Hey, its me Chris { You are about to enter the Dark Cave! { Team Proto have already made it here and are causing havoc! { It's all over the news! { Apparently, whatever Zane has planned is causing the whole { region to go out of whack. { This could only mean one thing... { and its not good. { The Dark Cave is rumored to be the gateway between our world and the spirit world. { In the spirit world, the God of all Pokémon, Arceus, lives. { It was told that the only Pokémon to ever rival Arceus was { Genesect! { Somehow, Zane is trying to use Genesect to capture Arceus... If this happens... { Oh my! I couldn't even imagine what would happen. { The whole region could crumble! { You have to put a stop to this! { I have gathered help from people all over the region to lend you a choice between the strongest of Pokémon! { Here, take your pick.");
+       image(chris,430*widthRatio,195*heightRatio);
+       Dialogue caveEnter = new Dialogue("Pssst... { Hey, its me Chris { You are about to enter the Dark Cave! { Team Proto have already made it here and are causing havoc! { It's all over the news! { Apparently, whatever Zane has planned is causing the whole region to go out of whack. { This could only mean one thing... { and its not good. { The Dark Cave is rumored to be the gateway between our world and the spirit world. { In the spirit world, the God of all Pokémon, Arceus, lives. { It was told that the only Pokémon to ever rival Arceus was Genesect! { Somehow, Zane is trying to use Genesect to capture Arceus... If this happens... { Oh my! I couldn't even imagine what would happen. { The whole region could crumble! { You have to put a stop to this! { I have gathered help from people all over the region to lend you a choice between the strongest of Pokémon! Here, take your pick.");
        dialogueReturn=caveEnter.render(dialogueCounter);
        if(dialogueReturn)
        {
@@ -1990,18 +1998,18 @@ void draw()
        //  chrisS.play();
        background(0,0,0);
        fill(255);
-       text("Dragonite",30,45);
-       text("Tyranitar",30,115);
-       text("Salamence",30,185);
-       text("Metagross",30,255);
-       text("Garchomp",30,325);
-       text("Hydreigon",30,395);
-       text("Volcarona",30,465);
-       text("Goodra",30,535);
-       text("Noivern",30,605);
-       image(arrow,7,arrowCounter);
-       image(chris,700,350);
-       fifthList[j].render(700,100);
+       text("Dragonite",30*widthRatio,45*heightRatio);
+       text("Tyranitar",30*widthRatio,115*heightRatio);
+       text("Salamence",30*widthRatio,185*heightRatio);
+       text("Metagross",30*widthRatio,255*heightRatio);
+       text("Garchomp",30*widthRatio,325*heightRatio);
+       text("Hydreigon",30*widthRatio,395*heightRatio);
+       text("Volcarona",30*widthRatio,465*heightRatio);
+       text("Goodra",30*widthRatio,535*heightRatio);
+       text("Noivern",30*widthRatio,605*heightRatio);
+       image(arrow,7*widthRatio,arrowCounter*heightRatio);
+       image(chris,700*widthRatio,350*heightRatio);
+       fifthList[j].render(700*widthRatio,100*heightRatio);
        break;
      case 36:
        //startBattle.song.stop();
@@ -2012,8 +2020,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=80;
-          main.y = 430;
+          main.x=80*widthRatio;
+          main.y = 430*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -2035,18 +2043,18 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < 25)
+       if(main.x < 25*widthRatio)
        {
-          main.x=1000;
-          main.y = 350;
+          main.x=1000*widthRatio;
+          main.y = 350*heightRatio;
           switchValMain=33;
           ambianceState=1;
           //send();
        }
-       if(main.x > 1100)
+       if(main.x > 1100*widthRatio)
        {
-         main.x=20;
-         main.y = 435;
+         main.x=20*widthRatio;
+         main.y = 435*heightRatio;
          switchValMain=37;
        }
        hitdc1 = hitTrainer(darkCave1);
@@ -2065,8 +2073,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=20;
-          main.y = 435;
+          main.x=20*widthRatio;
+          main.y = 435*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -2088,16 +2096,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-          main.x=1050;
-          main.y = 160;
+          main.x=1050*widthRatio;
+          main.y = 160*heightRatio;
           switchValMain=36;
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-          main.x=245;
-          main.y = 600;
+          main.x=245*widthRatio;
+          main.y = 600*heightRatio;
           switchValMain=38;
        }
        hitdc2 = hitTrainer(darkCave2);
@@ -2116,8 +2124,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=245;
-          main.y = 600;
+          main.x=245*widthRatio;
+          main.y = 600*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -2139,16 +2147,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.y > 650)
+       if(main.y > 650*heightRatio)
        {
-          main.x=835;
-          main.y = 10;
+          main.x=835*widthRatio;
+          main.y = 10*heightRatio;
           switchValMain=37;
        }
-       if(main.x > 1100)
+       if(main.x > 1100*widthRatio)
        {
-          main.x=20;
-          main.y = 375;
+          main.x=20*widthRatio;
+          main.y = 375*heightRatio;
           switchValMain=39;
        }
        hitdc3 = hitTrainer(darkCave3);
@@ -2167,8 +2175,8 @@ void draw()
        i++;
        if(battleLost)
         {
-          main.x=20;
-          main.y = 375;
+          main.x=20*widthRatio;
+          main.y = 375*heightRatio;
           mainT.reset();
           //send();
           battleLost=false;
@@ -2190,16 +2198,16 @@ void draw()
        main.moveRight();
        main.moveUp();
        main.moveDown();
-       if(main.x < -45)
+       if(main.x < -45*widthRatio)
        {
-          main.x=1050;
-          main.y = 155;
+          main.x=1050*widthRatio;
+          main.y = 155*heightRatio;
           switchValMain=38;
        }
-       if(main.y < -45)
+       if(main.y < -45*heightRatio)
        {
-          main.x=515;
-          main.y = 340;
+          main.x=515*widthRatio;
+          main.y = 340*heightRatio;
           switchValMain=40;
           ambianceState=0;
           //send();
@@ -2224,7 +2232,7 @@ void draw()
         {
           switchValMain=42;  
         }
-        Dialogue zaneMonologue2 = new Dialogue("Well then... { I thought I told you to not follow me! { You shouldn't have come here... { Your a smart guy, I bet you already know my plan... { With Arceus at my command, I could tear down the Hack Region and shape it into a society ruled by Team Proto! { No one will ever stand in our way and true power will be mine! Now Genesect! Use your power to summon Arceus! { GENESECT! { BOOM!!");
+        Dialogue zaneMonologue2 = new Dialogue("Well then... { I thought I told you to not follow me! { You shouldn't have come here... { Your a smart guy, I bet you already know my plan... With Arceus at my command, I could tear down the Hack Region and shape it into a society ruled by Team Proto! No one will ever stand in our way and true power will be mine! Now Genesect! Use your power to summon { Arceus! { GENESECT! { BOOM!!");
         dialogueReturn=zaneMonologue2.render(dialogueCounter);
         if(dialogueReturn)
         {
@@ -2269,7 +2277,7 @@ void draw()
        //if(!caveS.isPlaying())
        //  caveS.play();
        background(0,0,0);
-       image(loadImage("ZaneC.png"),430,195);
+       image(loadImage("ZaneC.png"),430*widthRatio,195*heightRatio);
        Dialogue zaneEnd = new Dialogue("NO!! { This can't be!! { How did you do it? { All my plans... { RUINED!!!!");
        dialogueReturn=zaneEnd.render(dialogueCounter);
        if(dialogueReturn)
@@ -2283,7 +2291,7 @@ void draw()
        //if(!caveS.isPlaying())
        //  caveS.play();
         finalC.renderTerrain();
-        Dialogue chrisFinal = new Dialogue("Well Done! { I knew I could count on you to put a stop to Zane! { You did a great service to the region and every is very thankful! Zane will be locked up and stripped of his Pokémon for a very long time for what he tried to do. { As for Arceus and Genesect, Arceus has already left for the spirit world and took Genesect with him to be locked up. { Well done trainer, you truly made the Hack Region proud!");
+        Dialogue chrisFinal = new Dialogue("Well Done! { I knew I could count on you to put a stop to Zane! You did a great service to the region and every is very thankful! Zane will be locked up and stripped of his Pokémon for a very long time for what he tried to do. { As for Arceus and Genesect, Arceus has already left for the spirit world and took Genesect with him to be locked up. { Well done trainer, you truly made the Hack Region proud!");
         dialogueReturn=chrisFinal.render(dialogueCounter);
         if(dialogueReturn)
         {
@@ -2296,7 +2304,7 @@ void draw()
        //if(!caveS.isPlaying())
        //  caveS.play();
         background(0,0,0);
-        Dialogue credits = new Dialogue("Thank you so much for playing Pokémon Hack Version! { This game was made by Riley Croker for his final project in { Physical Computing. { He would like to make sure to shout out the Pokémon Company { for using/altering a lot of their sprites. { Thank you for playing!");
+        Dialogue credits = new Dialogue("Thank you so much for playing Pokémon Hack Version! This game was made by Riley Croker for his final project in Physical Computing. { He would like to make sure to shout out the Pokémon Company for using/altering a lot of their sprites. Thank you for playing!");
         dialogueReturn=credits.render(dialogueCounter);
         if(dialogueReturn)
         {
@@ -2306,8 +2314,8 @@ void draw()
         break;
       case 45:
        //startBattle.song.stop();
-       if(!caveS.isPlaying())
-         caveS.play();
+       //if(!caveS.isPlaying())
+       //  caveS.play();
         background(0,0,0);
         break;
        
@@ -2880,8 +2888,8 @@ void keyPressed()
           main.isMovingRight = false;
           main.isMovingUp = false;
           main.isMovingDown = false;
-          main.x=80;
-          main.y = 430;
+          main.x=80*widthRatio;
+          main.y = 430*heightRatio;
           switchValMain=36;
           ambianceState=4;
          // send();
