@@ -4,7 +4,6 @@ class Type
    String[] weakness;
    String[] resistance;
    String[] immune;
-   PImage pic;
    
    Type()
    {
@@ -12,31 +11,23 @@ class Type
        weakness = new String[1];
        resistance = new String[1];
        immune = new String[1];
-       pic=null;
    }
    
-   Type(String tempName, String[] tempWeakness, String[] tempResistance, PImage picTemp)
+   Type(String tempName, String[] tempWeakness, String[] tempResistance)
    {
        name = tempName;
        immune = new String[1];
        immune[0] = "Nothing";
        weakness = tempWeakness;
        resistance = tempResistance;
-       pic = picTemp;
    }
    
-   Type(String tempName, String[] tempWeakness, String[] tempResistance, String[] tempImmune, PImage picTemp)
+   Type(String tempName, String[] tempWeakness, String[] tempResistance, String[] tempImmune)
    {
        name = tempName;
        immune = tempImmune;
        weakness = tempWeakness;
        resistance = tempResistance;
-       pic = picTemp;
    }
-   
-   void render(float x,float y)
-   {
-     if(pic!=null)
-       image(pic,x,y);  
-   }
+
 }
